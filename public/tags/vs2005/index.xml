@@ -2,51 +2,51 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>VS2005 on Nilesh Thakkar</title>
-    <link>http://localhost:1313/tags/vs2005/</link>
+    <link>//localhost:1313/tags/vs2005/</link>
     <description>Recent content in VS2005 on Nilesh Thakkar</description>
     <generator>Hugo -- 0.153.3</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 10 Apr 2011 16:40:00 +0530</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/vs2005/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//localhost:1313/tags/vs2005/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Useful Visual Studio Add-Ins</title>
-      <link>http://localhost:1313/2011/04/useful-visual-studio-add-ins.html</link>
+      <link>//localhost:1313/2011/04/useful-visual-studio-add-ins.html</link>
       <pubDate>Sun, 10 Apr 2011 16:40:00 +0530</pubDate>
-      <guid>http://localhost:1313/2011/04/useful-visual-studio-add-ins.html</guid>
+      <guid>//localhost:1313/2011/04/useful-visual-studio-add-ins.html</guid>
       <description>&lt;p&gt;Recently one of the guy asked on Asp.net forum that is there any shortcut key to insert comments above method or function. There’s no exact shortcut but yes, you can insert comment above your method and function by typing 3 slash (///) in c# and 3 single quote in VB and still you’ve to type summary for your method or function to define what it does.&lt;/p&gt;
 &lt;p&gt;But there exists add-in which help you to generate comments with summary on your defined shortcut. Just download &lt;a href=&#34;http://submain.com/products/ghostdoc.aspx&#34;&gt;GhostDoc&lt;/a&gt;, install it and define your short cut. Now whenever you’re required to generate comments, fire your defined shortcut once you’re done with that method or function and it will insert comments with summary.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Generate Nested Gridview Dynamically</title>
-      <link>http://localhost:1313/2009/07/generate-nested-gridview-dynamically.html</link>
+      <link>//localhost:1313/2009/07/generate-nested-gridview-dynamically.html</link>
       <pubDate>Tue, 14 Jul 2009 15:26:00 +0530</pubDate>
-      <guid>http://localhost:1313/2009/07/generate-nested-gridview-dynamically.html</guid>
+      <guid>//localhost:1313/2009/07/generate-nested-gridview-dynamically.html</guid>
       <description>&lt;p&gt;As i said in my last post, I’ll write about how to generate Nested Gridview dynamically. As there are many articles available on the net, let me provide you the link to the article that i referred.&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;http://progtalk.com/ViewArticle.aspx?ArticleID=54&#34;&gt;Gridview Control to show master-child or master-slave data&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;It provides detail explanation with snapshot. There is one disadvantage that Gridview control is available only on client side. It means if you want to perform some action on server side like you want to get child controls Gridview then it’s not possible.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Nested Gridview in Asp.net 2.0</title>
-      <link>http://localhost:1313/2009/05/nested-gridview-in-aspnet-20.html</link>
+      <link>//localhost:1313/2009/05/nested-gridview-in-aspnet-20.html</link>
       <pubDate>Mon, 18 May 2009 23:53:00 +0530</pubDate>
-      <guid>http://localhost:1313/2009/05/nested-gridview-in-aspnet-20.html</guid>
+      <guid>//localhost:1313/2009/05/nested-gridview-in-aspnet-20.html</guid>
       <description>How to create nested GridView in ASP.NET 2.0 with expand/collapse functionality.</description>
     </item>
     <item>
       <title>Retrieve selected treenode value at server side</title>
-      <link>http://localhost:1313/2009/05/retrieve-selected-treenode-value-at.html</link>
+      <link>//localhost:1313/2009/05/retrieve-selected-treenode-value-at.html</link>
       <pubDate>Tue, 05 May 2009 23:28:00 +0530</pubDate>
-      <guid>http://localhost:1313/2009/05/retrieve-selected-treenode-value-at.html</guid>
+      <guid>//localhost:1313/2009/05/retrieve-selected-treenode-value-at.html</guid>
       <description>&lt;p&gt;As I said in my previous post here’s the way to retrieve selected tree node value at the server-side.&lt;/p&gt;
-&lt;p&gt;&lt;img alt=&#34;treeviewcheckbox&#34; loading=&#34;lazy&#34; src=&#34;http://localhost:1313/images/8889f-treeviewcheckbox_thumb.jpg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;treeviewcheckbox&#34; loading=&#34;lazy&#34; src=&#34;//localhost:1313/images/8889f-treeviewcheckbox_thumb.jpg&#34;&gt;&lt;/p&gt;
 &lt;p&gt;In the above image, all the nodes are selected including parent node. In my first &lt;a href=&#34;http://nilthakkar.blogspot.com/2009/03/populate-treeview-with-database-fields.html&#34;&gt;post&lt;/a&gt; we concatenated the value of the parent node with child node and assigned it to child node so that whenever we want to retrieve value of child node, we can have parent node value.&lt;/p&gt;
 &lt;p&gt;Here’s the output of the selected nodes:&lt;/p&gt;</description>
     </item>
     <item>
       <title>Populate Treeview With Database Fields</title>
-      <link>http://localhost:1313/2009/03/populate-treeview-with-database-fields.html</link>
+      <link>//localhost:1313/2009/03/populate-treeview-with-database-fields.html</link>
       <pubDate>Thu, 26 Mar 2009 22:04:00 +0530</pubDate>
-      <guid>http://localhost:1313/2009/03/populate-treeview-with-database-fields.html</guid>
+      <guid>//localhost:1313/2009/03/populate-treeview-with-database-fields.html</guid>
       <description>&lt;p&gt;This post describes how to populate treeview with database fields. People often required to populate treeview with database fields and they choose different approaches to make it work. Here I am going to describe the simplest way.&lt;/p&gt;
 &lt;p&gt;Here I&amp;rsquo;ll be using Sql Server Sample Database: Pubs&lt;/p&gt;
 &lt;p&gt;Relations:&lt;/p&gt;

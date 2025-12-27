@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Web on Nilesh Thakkar</title>
-    <link>http://localhost:1313/tags/web/</link>
+    <link>//localhost:1313/tags/web/</link>
     <description>Recent content in Web on Nilesh Thakkar</description>
     <generator>Hugo -- 0.153.3</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 04 Mar 2012 19:37:00 +0530</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/web/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//localhost:1313/tags/web/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Edit, share, execute and debug code within browser - make a fiddle</title>
-      <link>http://localhost:1313/2012/03/edit-share-execute-and-debug-code.html</link>
+      <link>//localhost:1313/2012/03/edit-share-execute-and-debug-code.html</link>
       <pubDate>Sun, 04 Mar 2012 19:37:00 +0530</pubDate>
-      <guid>http://localhost:1313/2012/03/edit-share-execute-and-debug-code.html</guid>
+      <guid>//localhost:1313/2012/03/edit-share-execute-and-debug-code.html</guid>
       <description>&lt;p&gt;Many times we want to execute some ideas with JavaScript/Jquery and CSS to see whether we are on the right track?  We want to share HTML, CSS and JavaScript/Jquery code with others and allow them to run it, specially on the forums. If so, make a fiddle. It not only solves problem of sharing but also #9 mentioned in Mike’s post &lt;a href=&#34;http://www.mikesdotnetting.com/Article/69/How-to-get-your-forum-question-answered-avoid-thread-jacking&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;http://jsfiddle.net/&#34;&gt;JSFiddle&lt;/a&gt;, an online editor for web snippets.&lt;/p&gt;
 &lt;p&gt;Rather than posting entirety of all the files into forum post, just do the following :&lt;/p&gt;</description>

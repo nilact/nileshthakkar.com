@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Itextsharp on Nilesh Thakkar</title>
-    <link>http://localhost:1313/tags/itextsharp/</link>
+    <link>//localhost:1313/tags/itextsharp/</link>
     <description>Recent content in Itextsharp on Nilesh Thakkar</description>
     <generator>Hugo -- 0.153.3</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 18 Aug 2015 00:18:00 +0530</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/itextsharp/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//localhost:1313/tags/itextsharp/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>iTextSharp: Add dynamic header</title>
-      <link>http://localhost:1313/2015/08/itextsharp-add-dynamic-header.html</link>
+      <link>//localhost:1313/2015/08/itextsharp-add-dynamic-header.html</link>
       <pubDate>Tue, 18 Aug 2015 00:18:00 +0530</pubDate>
-      <guid>http://localhost:1313/2015/08/itextsharp-add-dynamic-header.html</guid>
+      <guid>//localhost:1313/2015/08/itextsharp-add-dynamic-header.html</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://www.blogger.com/blogger.g?blogID=645092693690783735&#34;&gt;&lt;/a&gt;&lt;strong&gt;Note:&lt;/strong&gt; If you have not gone through my previous post &lt;a href=&#34;http://nilthakkar.blogspot.in/2013/11/itextsharpadd-headerfooter-to-pdf.html&#34;&gt;&lt;strong&gt;iTextSharp–Add header/footer to PDF&lt;/strong&gt;&lt;/a&gt; , please go through it.&lt;/p&gt;
 &lt;p&gt;Most of the time we&amp;rsquo;ll require to print dynamic value in header. i.e. Company Name etc.&lt;/p&gt;
 &lt;p&gt;You can create properties in PageEvent class that inherits PdfPageEventHelper class.&lt;/p&gt;
@@ -49,9 +49,9 @@
     </item>
     <item>
       <title>iTextSharp–Add watermark to PDF</title>
-      <link>http://localhost:1313/2013/12/itextsharpadd-watermark-to-pdf.html</link>
+      <link>//localhost:1313/2013/12/itextsharpadd-watermark-to-pdf.html</link>
       <pubDate>Tue, 31 Dec 2013 21:56:00 +0530</pubDate>
-      <guid>http://localhost:1313/2013/12/itextsharpadd-watermark-to-pdf.html</guid>
+      <guid>//localhost:1313/2013/12/itextsharpadd-watermark-to-pdf.html</guid>
       <description>&lt;p&gt;In last post &lt;a href=&#34;http://nilthakkar.blogspot.com/2013/11/itextsharpadd-headerfooter-to-pdf.html&#34;&gt;iTextSharp–Add header/footer to PDF&lt;/a&gt; we saw how to create pdf with header/footer. To add watermark to pdf, you need to create a class that implement &lt;strong&gt;IPdfPageEvent&lt;/strong&gt; as shown in below code:&lt;/p&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt; public class PdfWriterEvents : IPdfPageEvent
     {
@@ -97,9 +97,9 @@
     </item>
     <item>
       <title>iTextSharp–Add header/footer to PDF </title>
-      <link>http://localhost:1313/2013/11/itextsharpadd-headerfooter-to-pdf.html</link>
+      <link>//localhost:1313/2013/11/itextsharpadd-headerfooter-to-pdf.html</link>
       <pubDate>Sat, 30 Nov 2013 21:55:00 +0530</pubDate>
-      <guid>http://localhost:1313/2013/11/itextsharpadd-headerfooter-to-pdf.html</guid>
+      <guid>//localhost:1313/2013/11/itextsharpadd-headerfooter-to-pdf.html</guid>
       <description>&lt;p&gt;It’s a common requirement to have header/footer on PDF and it could be achieved using PageEvents in iTextSharp. It depends on the requirement, but in general header may contain:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Header Title&lt;/li&gt;
@@ -170,9 +170,9 @@
     </item>
     <item>
       <title>iTextSharp–Print PDF</title>
-      <link>http://localhost:1313/2013/09/itextsharpprint-pdf.html</link>
+      <link>//localhost:1313/2013/09/itextsharpprint-pdf.html</link>
       <pubDate>Mon, 30 Sep 2013 22:36:00 +0530</pubDate>
-      <guid>http://localhost:1313/2013/09/itextsharpprint-pdf.html</guid>
+      <guid>//localhost:1313/2013/09/itextsharpprint-pdf.html</guid>
       <description>&lt;p&gt;To print html page, we use&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-javascript&#34; data-lang=&#34;javascript&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;window.&lt;span style=&#34;color:#a6e22e&#34;&gt;print&lt;/span&gt;();
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;but for PDF same can not be used as it won’t work. However iTextSharp provides a way to print PDF on client side with &lt;strong&gt;AddJavaScript&lt;/strong&gt; method of PdfWriter.&lt;/p&gt;
@@ -228,9 +228,9 @@
     </item>
     <item>
       <title>iTextSharp - Add Image from base64 string</title>
-      <link>http://localhost:1313/2013/03/itextsharp-add-image-from-base64-string.html</link>
+      <link>//localhost:1313/2013/03/itextsharp-add-image-from-base64-string.html</link>
       <pubDate>Sun, 17 Mar 2013 22:53:00 +0530</pubDate>
-      <guid>http://localhost:1313/2013/03/itextsharp-add-image-from-base64-string.html</guid>
+      <guid>//localhost:1313/2013/03/itextsharp-add-image-from-base64-string.html</guid>
       <description>&lt;p&gt;Itexhsharp is one of the popular third party component to create PDF with .Net framework.&lt;/p&gt;
 &lt;p&gt;If you&amp;rsquo;re using Itextsharp for the very first time, I would suggest you to go through Mike&amp;rsquo;s &lt;a href=&#34;http://www.mikesdotnetting.com/Article/80/Create-PDFs-in-ASP.NET-getting-started-with-iTextSharp&#34;&gt;series on Itextsharp&lt;/a&gt; that helps you to get started and &lt;a href=&#34;http://www.mikesdotnetting.com/Article/87/iTextSharp-Working-with-images&#34;&gt;here&lt;/a&gt; is the article from the series that shows different ways to add images to  Itextsharp.&lt;/p&gt;
 &lt;p&gt;To add image from base64 string, you first need to convert base64 string in to bytes array and then you can call GetInstance method of Itextsharp Image which accepts bytes array.&lt;/p&gt;</description>

@@ -2,26 +2,26 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>GridView on Nilesh Thakkar</title>
-    <link>http://localhost:1313/tags/gridview/</link>
+    <link>//localhost:1313/tags/gridview/</link>
     <description>Recent content in GridView on Nilesh Thakkar</description>
     <generator>Hugo -- 0.153.3</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 14 Jul 2009 15:26:00 +0530</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/gridview/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//localhost:1313/tags/gridview/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Generate Nested Gridview Dynamically</title>
-      <link>http://localhost:1313/2009/07/generate-nested-gridview-dynamically.html</link>
+      <link>//localhost:1313/2009/07/generate-nested-gridview-dynamically.html</link>
       <pubDate>Tue, 14 Jul 2009 15:26:00 +0530</pubDate>
-      <guid>http://localhost:1313/2009/07/generate-nested-gridview-dynamically.html</guid>
+      <guid>//localhost:1313/2009/07/generate-nested-gridview-dynamically.html</guid>
       <description>&lt;p&gt;As i said in my last post, I’ll write about how to generate Nested Gridview dynamically. As there are many articles available on the net, let me provide you the link to the article that i referred.&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;http://progtalk.com/ViewArticle.aspx?ArticleID=54&#34;&gt;Gridview Control to show master-child or master-slave data&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;It provides detail explanation with snapshot. There is one disadvantage that Gridview control is available only on client side. It means if you want to perform some action on server side like you want to get child controls Gridview then it’s not possible.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Nested Gridview in Asp.net 2.0</title>
-      <link>http://localhost:1313/2009/05/nested-gridview-in-aspnet-20.html</link>
+      <link>//localhost:1313/2009/05/nested-gridview-in-aspnet-20.html</link>
       <pubDate>Mon, 18 May 2009 23:53:00 +0530</pubDate>
-      <guid>http://localhost:1313/2009/05/nested-gridview-in-aspnet-20.html</guid>
+      <guid>//localhost:1313/2009/05/nested-gridview-in-aspnet-20.html</guid>
       <description>How to create nested GridView in ASP.NET 2.0 with expand/collapse functionality.</description>
     </item>
   </channel>

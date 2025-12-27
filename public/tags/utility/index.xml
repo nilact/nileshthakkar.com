@@ -2,26 +2,26 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Utility on Nilesh Thakkar</title>
-    <link>http://localhost:1313/tags/utility/</link>
+    <link>//localhost:1313/tags/utility/</link>
     <description>Recent content in Utility on Nilesh Thakkar</description>
     <generator>Hugo -- 0.153.3</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 27 Dec 2011 22:21:00 +0530</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/utility/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//localhost:1313/tags/utility/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>dotPeek, an alternative to .NET Reflector</title>
-      <link>http://localhost:1313/2011/12/dotpeek-alternative-to-net-reflector.html</link>
+      <link>//localhost:1313/2011/12/dotpeek-alternative-to-net-reflector.html</link>
       <pubDate>Tue, 27 Dec 2011 22:21:00 +0530</pubDate>
-      <guid>http://localhost:1313/2011/12/dotpeek-alternative-to-net-reflector.html</guid>
+      <guid>//localhost:1313/2011/12/dotpeek-alternative-to-net-reflector.html</guid>
       <description>&lt;p&gt;Those who have been using .NET &lt;a href=&#34;http://www.reflector.net/&#34;&gt;Reflector&lt;/a&gt;, must be knowing that it’s not free anymore. Those who don’t know about Reflector, don’t have to bother much now. You could download dotPeek, an awesome decompiler, which is in the Early Access Program stage. It’s been developed by JetBrains, the maker of Resharper and more developer productivity tools. &lt;/p&gt;
 &lt;p&gt;You can check out what its latest build offer &lt;a href=&#34;http://blogs.jetbrains.com/dotnet/2011/12/dotpeek-is-back-with-new-early-build/&#34;&gt;here&lt;/a&gt; and can download it from &lt;a href=&#34;http://confluence.jetbrains.net/display/NETPEEK/dotPeek+Early+Access+Program&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;In this year, there are more posts related to add-ins and tools, but will have more programming problems and their solutions related posts in coming new year. :)&lt;/p&gt;</description>
     </item>
     <item>
       <title>Mouse Extender : A cozy utility</title>
-      <link>http://localhost:1313/2010/08/mouse-extender-cozy-utility.html</link>
+      <link>//localhost:1313/2010/08/mouse-extender-cozy-utility.html</link>
       <pubDate>Mon, 09 Aug 2010 22:01:00 +0530</pubDate>
-      <guid>http://localhost:1313/2010/08/mouse-extender-cozy-utility.html</guid>
+      <guid>//localhost:1313/2010/08/mouse-extender-cozy-utility.html</guid>
       <description>&lt;p&gt;If you don’t like your desktop covered with so many icons and still want to open your favourite program with ease then Mouse Extender (ME) is the best option for you. I’ve been using it for quite a long time at my home as well as office. You can download it from &lt;a href=&#34;http://me.codeplex.com/&#34;&gt;CodePlex&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;ME is based on WPF and requires .Net Framework 3.5 sp1 to be installed. If you’ve .Net framework installed then it’s good but if not then you can check minimum installation you need &lt;a href=&#34;http://www.hanselman.com/smallestdotnet/&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;</description>
     </item>

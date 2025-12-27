@@ -1,4 +1,4 @@
-baseURL = "https://nileshblog.github.io/"  # Change to your actual URL later
+baseURL = "/"  # Change to your actual URL later
 languageCode = "en-us"
 title = "Nilesh Thakkar"
 theme = "PaperMod"
@@ -17,6 +17,7 @@ theme = "PaperMod"
   ShowShareButtons = true
   ShowPostNavLinks = true
   comments = true
+  disableFingerprinting = true
 
   [params.homeInfoParams]
     Title = "Hello, I'm Nilesh Thakkar 👋"

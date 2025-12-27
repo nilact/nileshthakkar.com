@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Asp.net Ajax on Nilesh Thakkar</title>
-    <link>http://localhost:1313/tags/asp.net-ajax/</link>
+    <link>//localhost:1313/tags/asp.net-ajax/</link>
     <description>Recent content in Asp.net Ajax on Nilesh Thakkar</description>
     <generator>Hugo -- 0.153.3</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 16 Jan 2014 16:25:00 +0530</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/asp.net-ajax/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//localhost:1313/tags/asp.net-ajax/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>JQuery UI AutoComplete TextBox from Database using PageMethod in ASP.Net</title>
-      <link>http://localhost:1313/2014/01/jquery-ui-autocomplete-textbox-from.html</link>
+      <link>//localhost:1313/2014/01/jquery-ui-autocomplete-textbox-from.html</link>
       <pubDate>Thu, 16 Jan 2014 16:25:00 +0530</pubDate>
-      <guid>http://localhost:1313/2014/01/jquery-ui-autocomplete-textbox-from.html</guid>
+      <guid>//localhost:1313/2014/01/jquery-ui-autocomplete-textbox-from.html</guid>
       <description>&lt;p&gt;In this post we’ll see how to user Jquery UI Autocomplete with asp.net pagemethod.&lt;/p&gt;
 &lt;p&gt;For database, we’ll be using &lt;a href=&#34;http://northwinddatabase.codeplex.com/releases/view/71634&#34;&gt;Northwind&lt;/a&gt; database.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;PageMethod:&lt;/strong&gt;&lt;/p&gt;
@@ -53,9 +53,9 @@
     </item>
     <item>
       <title>Validation in Updatepanel</title>
-      <link>http://localhost:1313/2008/10/validation-in-updatepanel.html</link>
+      <link>//localhost:1313/2008/10/validation-in-updatepanel.html</link>
       <pubDate>Mon, 13 Oct 2008 14:42:00 +0530</pubDate>
-      <guid>http://localhost:1313/2008/10/validation-in-updatepanel.html</guid>
+      <guid>//localhost:1313/2008/10/validation-in-updatepanel.html</guid>
       <description>How to use validation controls with ASP.NET UpdatePanel control.</description>
     </item>
   </channel>

@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Web 2.0 on Nilesh Thakkar</title>
-    <link>http://localhost:1313/tags/web-2.0/</link>
+    <link>//localhost:1313/tags/web-2.0/</link>
     <description>Recent content in Web 2.0 on Nilesh Thakkar</description>
     <generator>Hugo -- 0.153.3</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 24 Sep 2008 14:20:00 +0530</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/web-2.0/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//localhost:1313/tags/web-2.0/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Web 2.0</title>
-      <link>http://localhost:1313/2008/09/web-20.html</link>
+      <link>//localhost:1313/2008/09/web-20.html</link>
       <pubDate>Wed, 24 Sep 2008 14:20:00 +0530</pubDate>
-      <guid>http://localhost:1313/2008/09/web-20.html</guid>
+      <guid>//localhost:1313/2008/09/web-20.html</guid>
       <description>&lt;p&gt;Hello everyone, this is my first post and here i am going to write nothing new and you might have come across similar kind of post related to Web 2.0 in the ocean of internet while surfing but for many people this is something new because they are beginner and didn&amp;rsquo;t try to know about it so let&amp;rsquo;s start with it.&lt;/p&gt;
 &lt;p&gt;what is web 2.0?&lt;/p&gt;
 &lt;p&gt;Web 2.0 is not a technology but it does indicate changing trends in the use of world wide web and web design that aims to enhance creativity, information sharing and most notably collaboration among users.&lt;/p&gt;</description>

@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Nilesh Thakkar</title>
-    <link>http://localhost:1313/</link>
+    <link>//localhost:1313/</link>
     <description>Recent content on Nilesh Thakkar</description>
     <generator>Hugo -- 0.153.3</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 10 Sep 2016 22:44:00 +0530</lastBuildDate>
-    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Asp.net Web API Help Page Customization</title>
-      <link>http://localhost:1313/2016/09/aspnet-web-api-help-page-customization.html</link>
+      <link>//localhost:1313/2016/09/aspnet-web-api-help-page-customization.html</link>
       <pubDate>Sat, 10 Sep 2016 22:44:00 +0530</pubDate>
-      <guid>http://localhost:1313/2016/09/aspnet-web-api-help-page-customization.html</guid>
+      <guid>//localhost:1313/2016/09/aspnet-web-api-help-page-customization.html</guid>
       <description>Customize ASP.NET Web API Help Page with sorting, multi-project support, and more.</description>
     </item>
     <item>
       <title>iTextSharp: Add dynamic header</title>
-      <link>http://localhost:1313/2015/08/itextsharp-add-dynamic-header.html</link>
+      <link>//localhost:1313/2015/08/itextsharp-add-dynamic-header.html</link>
       <pubDate>Tue, 18 Aug 2015 00:18:00 +0530</pubDate>
-      <guid>http://localhost:1313/2015/08/itextsharp-add-dynamic-header.html</guid>
+      <guid>//localhost:1313/2015/08/itextsharp-add-dynamic-header.html</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://www.blogger.com/blogger.g?blogID=645092693690783735&#34;&gt;&lt;/a&gt;&lt;strong&gt;Note:&lt;/strong&gt; If you have not gone through my previous post &lt;a href=&#34;http://nilthakkar.blogspot.in/2013/11/itextsharpadd-headerfooter-to-pdf.html&#34;&gt;&lt;strong&gt;iTextSharp–Add header/footer to PDF&lt;/strong&gt;&lt;/a&gt; , please go through it.&lt;/p&gt;
 &lt;p&gt;Most of the time we&amp;rsquo;ll require to print dynamic value in header. i.e. Company Name etc.&lt;/p&gt;
 &lt;p&gt;You can create properties in PageEvent class that inherits PdfPageEventHelper class.&lt;/p&gt;
@@ -56,9 +56,9 @@
     </item>
     <item>
       <title>JQuery UI AutoComplete TextBox from Database using PageMethod in ASP.Net</title>
-      <link>http://localhost:1313/2014/01/jquery-ui-autocomplete-textbox-from.html</link>
+      <link>//localhost:1313/2014/01/jquery-ui-autocomplete-textbox-from.html</link>
       <pubDate>Thu, 16 Jan 2014 16:25:00 +0530</pubDate>
-      <guid>http://localhost:1313/2014/01/jquery-ui-autocomplete-textbox-from.html</guid>
+      <guid>//localhost:1313/2014/01/jquery-ui-autocomplete-textbox-from.html</guid>
       <description>&lt;p&gt;In this post we’ll see how to user Jquery UI Autocomplete with asp.net pagemethod.&lt;/p&gt;
 &lt;p&gt;For database, we’ll be using &lt;a href=&#34;http://northwinddatabase.codeplex.com/releases/view/71634&#34;&gt;Northwind&lt;/a&gt; database.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;PageMethod:&lt;/strong&gt;&lt;/p&gt;
@@ -99,9 +99,9 @@
     </item>
     <item>
       <title>Jquery DataTables : Add column filter and remove global filter</title>
-      <link>http://localhost:1313/2014/01/jquery-datatables-add-column-filter-and.html</link>
+      <link>//localhost:1313/2014/01/jquery-datatables-add-column-filter-and.html</link>
       <pubDate>Wed, 15 Jan 2014 15:50:00 +0530</pubDate>
-      <guid>http://localhost:1313/2014/01/jquery-datatables-add-column-filter-and.html</guid>
+      <guid>//localhost:1313/2014/01/jquery-datatables-add-column-filter-and.html</guid>
       <description>&lt;p&gt;Jquery &lt;a href=&#34;http://datatables.net/&#34;&gt;DataTables&lt;/a&gt; plugin allows you to search through all the columns and it works pretty well. Now if you wan to add column wise filter, you need to use &lt;a href=&#34;https://code.google.com/p/jquery-datatables-column-filter/&#34;&gt;JQuery DataTables Column Filter plugin&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;To extend Jquery DataTables with Column Filter plugin, you need to have code like below:&lt;/p&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;     &amp;lt;asp:Repeater ID=&amp;#34;repUserTempAssignment&amp;#34; runat=&amp;#34;server&amp;#34; DataSourceID=&amp;#34;SqlDataSource1&amp;#34;
@@ -166,9 +166,9 @@
     </item>
     <item>
       <title>iTextSharp–Add watermark to PDF</title>
-      <link>http://localhost:1313/2013/12/itextsharpadd-watermark-to-pdf.html</link>
+      <link>//localhost:1313/2013/12/itextsharpadd-watermark-to-pdf.html</link>
       <pubDate>Tue, 31 Dec 2013 21:56:00 +0530</pubDate>
-      <guid>http://localhost:1313/2013/12/itextsharpadd-watermark-to-pdf.html</guid>
+      <guid>//localhost:1313/2013/12/itextsharpadd-watermark-to-pdf.html</guid>
       <description>&lt;p&gt;In last post &lt;a href=&#34;http://nilthakkar.blogspot.com/2013/11/itextsharpadd-headerfooter-to-pdf.html&#34;&gt;iTextSharp–Add header/footer to PDF&lt;/a&gt; we saw how to create pdf with header/footer. To add watermark to pdf, you need to create a class that implement &lt;strong&gt;IPdfPageEvent&lt;/strong&gt; as shown in below code:&lt;/p&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt; public class PdfWriterEvents : IPdfPageEvent
     {
@@ -214,9 +214,9 @@
     </item>
     <item>
       <title>iTextSharp–Add header/footer to PDF </title>
-      <link>http://localhost:1313/2013/11/itextsharpadd-headerfooter-to-pdf.html</link>
+      <link>//localhost:1313/2013/11/itextsharpadd-headerfooter-to-pdf.html</link>
       <pubDate>Sat, 30 Nov 2013 21:55:00 +0530</pubDate>
-      <guid>http://localhost:1313/2013/11/itextsharpadd-headerfooter-to-pdf.html</guid>
+      <guid>//localhost:1313/2013/11/itextsharpadd-headerfooter-to-pdf.html</guid>
       <description>&lt;p&gt;It’s a common requirement to have header/footer on PDF and it could be achieved using PageEvents in iTextSharp. It depends on the requirement, but in general header may contain:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Header Title&lt;/li&gt;
@@ -287,9 +287,9 @@
     </item>
     <item>
       <title>iTextSharp–Print PDF</title>
-      <link>http://localhost:1313/2013/09/itextsharpprint-pdf.html</link>
+      <link>//localhost:1313/2013/09/itextsharpprint-pdf.html</link>
       <pubDate>Mon, 30 Sep 2013 22:36:00 +0530</pubDate>
-      <guid>http://localhost:1313/2013/09/itextsharpprint-pdf.html</guid>
+      <guid>//localhost:1313/2013/09/itextsharpprint-pdf.html</guid>
       <description>&lt;p&gt;To print html page, we use&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-javascript&#34; data-lang=&#34;javascript&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;window.&lt;span style=&#34;color:#a6e22e&#34;&gt;print&lt;/span&gt;();
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;but for PDF same can not be used as it won’t work. However iTextSharp provides a way to print PDF on client side with &lt;strong&gt;AddJavaScript&lt;/strong&gt; method of PdfWriter.&lt;/p&gt;
@@ -345,9 +345,9 @@
     </item>
     <item>
       <title>Copy as path in Windows 7/8</title>
-      <link>http://localhost:1313/2013/09/copy-as-path-in-windows-78.html</link>
+      <link>//localhost:1313/2013/09/copy-as-path-in-windows-78.html</link>
       <pubDate>Sun, 22 Sep 2013 21:50:00 +0530</pubDate>
-      <guid>http://localhost:1313/2013/09/copy-as-path-in-windows-78.html</guid>
+      <guid>//localhost:1313/2013/09/copy-as-path-in-windows-78.html</guid>
       <description>&lt;p&gt;Many times we want to copy complete file path and we do that in two steps:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Copy path of the folder/drive in which file resides&lt;/li&gt;
@@ -358,47 +358,47 @@
     </item>
     <item>
       <title>Jquery Multiselect plugin retain selection on postback in Asp.net</title>
-      <link>http://localhost:1313/2013/05/jquery-multiselect-plugin-retain.html</link>
+      <link>//localhost:1313/2013/05/jquery-multiselect-plugin-retain.html</link>
       <pubDate>Sat, 11 May 2013 19:30:00 +0530</pubDate>
-      <guid>http://localhost:1313/2013/05/jquery-multiselect-plugin-retain.html</guid>
+      <guid>//localhost:1313/2013/05/jquery-multiselect-plugin-retain.html</guid>
       <description>&lt;p&gt;One can use &lt;a href=&#34;http://www.erichynds.com/blog/jquery-ui-multiselect-widget&#34;&gt;Jquery Mutiselect&lt;/a&gt; plugin to allow user to select multiple items from the options available in dropdown. When we click on dropdown it looks something like below:&lt;/p&gt;
-&lt;p&gt;&lt;img alt=&#34;image&#34; loading=&#34;lazy&#34; src=&#34;http://localhost:1313/images/73080-image_thumb.png&#34;&gt;&lt;br&gt;
+&lt;p&gt;&lt;img alt=&#34;image&#34; loading=&#34;lazy&#34; src=&#34;//localhost:1313/images/73080-image_thumb.png&#34;&gt;&lt;br&gt;
 Check out the demo page of plugin &lt;a href=&#34;http://www.erichynds.com/examples/jquery-ui-multiselect-widget/demos/index.htm#basic&#34;&gt;here&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;The problem with the plugin is that it won’t remember the user selection and value will be lost on postback. For that you can store the selected valued delimited by comma in hidden field and restore the value on page load.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Visual Studio Macros and Build Events</title>
-      <link>http://localhost:1313/2013/04/visual-studio-macros-and-build-events.html</link>
+      <link>//localhost:1313/2013/04/visual-studio-macros-and-build-events.html</link>
       <pubDate>Sun, 14 Apr 2013 17:07:00 +0530</pubDate>
-      <guid>http://localhost:1313/2013/04/visual-studio-macros-and-build-events.html</guid>
+      <guid>//localhost:1313/2013/04/visual-studio-macros-and-build-events.html</guid>
       <description>&lt;p&gt;Visual studio has a nifty feature called Post/Pre Build events. These are used to include extra Dos commands and Macros and execute them before or after build.&lt;/p&gt;
 &lt;p&gt;You can open it using &lt;strong&gt;project properties&lt;/strong&gt; and it will open dialog as shown below:&lt;/p&gt;
-&lt;p&gt;&lt;img alt=&#34;BuildEvent Dialog&#34; loading=&#34;lazy&#34; src=&#34;http://localhost:1313/images/53d3a-buildevent252520dialog_thumb25255b225255d.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;BuildEvent Dialog&#34; loading=&#34;lazy&#34; src=&#34;//localhost:1313/images/53d3a-buildevent252520dialog_thumb25255b225255d.png&#34;&gt;&lt;/p&gt;
 &lt;p&gt;For post-build events you can define when to run commands included as shown in below snap:&lt;/p&gt;
-&lt;p&gt;&lt;img alt=&#34;Post-build events&#34; loading=&#34;lazy&#34; src=&#34;http://localhost:1313/images/0b6d2-post-build252520events_thumb25255b325255d.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;Post-build events&#34; loading=&#34;lazy&#34; src=&#34;//localhost:1313/images/0b6d2-post-build252520events_thumb25255b325255d.png&#34;&gt;&lt;/p&gt;
 &lt;p&gt;You can click the respective Edit build buttons and it will open popup as shown below:&lt;/p&gt;</description>
     </item>
     <item>
       <title>Reset .net validation controls client side</title>
-      <link>http://localhost:1313/2013/04/reset-net-validation-controls-client.html</link>
+      <link>//localhost:1313/2013/04/reset-net-validation-controls-client.html</link>
       <pubDate>Tue, 02 Apr 2013 23:28:00 +0530</pubDate>
-      <guid>http://localhost:1313/2013/04/reset-net-validation-controls-client.html</guid>
+      <guid>//localhost:1313/2013/04/reset-net-validation-controls-client.html</guid>
       <description>&lt;p&gt;On many occasions we provide form reset functionality and people handle it client side or server side. In general we validate input from the user and show proper validation message. But sometimes it happens that user has entered wrong input and thus it will display validation messages. Now if you have handled form reset functionality client side, you must reset all validation message as well. You can do it as shown in below code:&lt;/p&gt;</description>
     </item>
     <item>
       <title>iTextSharp - Add Image from base64 string</title>
-      <link>http://localhost:1313/2013/03/itextsharp-add-image-from-base64-string.html</link>
+      <link>//localhost:1313/2013/03/itextsharp-add-image-from-base64-string.html</link>
       <pubDate>Sun, 17 Mar 2013 22:53:00 +0530</pubDate>
-      <guid>http://localhost:1313/2013/03/itextsharp-add-image-from-base64-string.html</guid>
+      <guid>//localhost:1313/2013/03/itextsharp-add-image-from-base64-string.html</guid>
       <description>&lt;p&gt;Itexhsharp is one of the popular third party component to create PDF with .Net framework.&lt;/p&gt;
 &lt;p&gt;If you&amp;rsquo;re using Itextsharp for the very first time, I would suggest you to go through Mike&amp;rsquo;s &lt;a href=&#34;http://www.mikesdotnetting.com/Article/80/Create-PDFs-in-ASP.NET-getting-started-with-iTextSharp&#34;&gt;series on Itextsharp&lt;/a&gt; that helps you to get started and &lt;a href=&#34;http://www.mikesdotnetting.com/Article/87/iTextSharp-Working-with-images&#34;&gt;here&lt;/a&gt; is the article from the series that shows different ways to add images to  Itextsharp.&lt;/p&gt;
 &lt;p&gt;To add image from base64 string, you first need to convert base64 string in to bytes array and then you can call GetInstance method of Itextsharp Image which accepts bytes array.&lt;/p&gt;</description>
     </item>
     <item>
       <title>How to pass multiple records to stored procedure in Asp.net?</title>
-      <link>http://localhost:1313/2012/05/how-to-pass-multiple-records-to-stored.html</link>
+      <link>//localhost:1313/2012/05/how-to-pass-multiple-records-to-stored.html</link>
       <pubDate>Tue, 08 May 2012 01:14:00 +0530</pubDate>
-      <guid>http://localhost:1313/2012/05/how-to-pass-multiple-records-to-stored.html</guid>
+      <guid>//localhost:1313/2012/05/how-to-pass-multiple-records-to-stored.html</guid>
       <description>&lt;p&gt;There are mainly three ways you can pass multiple records to stored procedure.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Comma delimited string:  It is suitable for the scenario where you need to pass single column value&lt;/li&gt;
@@ -409,34 +409,34 @@ Check out the demo page of plugin &lt;a href=&#34;http://www.erichynds.com/examp
     </item>
     <item>
       <title>Edit, share, execute and debug code within browser - make a fiddle</title>
-      <link>http://localhost:1313/2012/03/edit-share-execute-and-debug-code.html</link>
+      <link>//localhost:1313/2012/03/edit-share-execute-and-debug-code.html</link>
       <pubDate>Sun, 04 Mar 2012 19:37:00 +0530</pubDate>
-      <guid>http://localhost:1313/2012/03/edit-share-execute-and-debug-code.html</guid>
+      <guid>//localhost:1313/2012/03/edit-share-execute-and-debug-code.html</guid>
       <description>&lt;p&gt;Many times we want to execute some ideas with JavaScript/Jquery and CSS to see whether we are on the right track?  We want to share HTML, CSS and JavaScript/Jquery code with others and allow them to run it, specially on the forums. If so, make a fiddle. It not only solves problem of sharing but also #9 mentioned in Mike’s post &lt;a href=&#34;http://www.mikesdotnetting.com/Article/69/How-to-get-your-forum-question-answered-avoid-thread-jacking&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;http://jsfiddle.net/&#34;&gt;JSFiddle&lt;/a&gt;, an online editor for web snippets.&lt;/p&gt;
 &lt;p&gt;Rather than posting entirety of all the files into forum post, just do the following :&lt;/p&gt;</description>
     </item>
     <item>
       <title>Tip: Schema qualify database objects</title>
-      <link>http://localhost:1313/2012/02/tip-schema-qualify-database-objects.html</link>
+      <link>//localhost:1313/2012/02/tip-schema-qualify-database-objects.html</link>
       <pubDate>Mon, 13 Feb 2012 19:45:00 +0530</pubDate>
-      <guid>http://localhost:1313/2012/02/tip-schema-qualify-database-objects.html</guid>
+      <guid>//localhost:1313/2012/02/tip-schema-qualify-database-objects.html</guid>
       <description>&lt;p&gt;When working in a team, it may happen that few of the team mates follow best practices and others don’t give damn about it. They just completes the tasks on the name of ‘getting things done’. It may create nightmares if all the team members don’t follow the best practices. Either do it or don’t.&lt;/p&gt;
 &lt;p&gt;Let’s see what can happen with below example.&lt;/p&gt;
 &lt;p&gt;In one of the project, an SP was created with prefix .dbo and it was working fine until changes came. Now one of the team member made changes and whole team had the feeling “all is well” until that SP was not returning the expected output. So you start debugging your app and consider the following could be the issue.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Specify size for character data type</title>
-      <link>http://localhost:1313/2012/01/specify-size-for-character-data-type.html</link>
+      <link>//localhost:1313/2012/01/specify-size-for-character-data-type.html</link>
       <pubDate>Mon, 16 Jan 2012 22:39:00 +0530</pubDate>
-      <guid>http://localhost:1313/2012/01/specify-size-for-character-data-type.html</guid>
+      <guid>//localhost:1313/2012/01/specify-size-for-character-data-type.html</guid>
       <description>&lt;p&gt;Recently I was referring books online to confirm one strange behavior in SQL Server. It was like in one of the legacy application, string was passed to stored procedure as parameter and it was storing only 30 characters. To my surprise when I saw the code, everything seem to be ok. Later on found out the problem and fault was while converting parameter to varchar there was no size defined.&lt;/p&gt;</description>
     </item>
     <item>
       <title>How to display message box in Asp.net?</title>
-      <link>http://localhost:1313/2012/01/how-to-display-message-box-in-aspnet.html</link>
+      <link>//localhost:1313/2012/01/how-to-display-message-box-in-aspnet.html</link>
       <pubDate>Mon, 02 Jan 2012 22:34:00 +0530</pubDate>
-      <guid>http://localhost:1313/2012/01/how-to-display-message-box-in-aspnet.html</guid>
+      <guid>//localhost:1313/2012/01/how-to-display-message-box-in-aspnet.html</guid>
       <description>&lt;p&gt;Every new beginner from windows form development background uses MsgBox.Show method but unfortunately it executes server side and will display the message box on server. Then they ask it on different forums seeking help, how to display message box in Asp.net then? (one of the most frequent and common question on asp.net forum)&lt;br&gt;
 There are various ways to do it.&lt;/p&gt;
 &lt;ul&gt;
@@ -449,18 +449,18 @@ There are various ways to do it.&lt;/p&gt;
     </item>
     <item>
       <title>dotPeek, an alternative to .NET Reflector</title>
-      <link>http://localhost:1313/2011/12/dotpeek-alternative-to-net-reflector.html</link>
+      <link>//localhost:1313/2011/12/dotpeek-alternative-to-net-reflector.html</link>
       <pubDate>Tue, 27 Dec 2011 22:21:00 +0530</pubDate>
-      <guid>http://localhost:1313/2011/12/dotpeek-alternative-to-net-reflector.html</guid>
+      <guid>//localhost:1313/2011/12/dotpeek-alternative-to-net-reflector.html</guid>
       <description>&lt;p&gt;Those who have been using .NET &lt;a href=&#34;http://www.reflector.net/&#34;&gt;Reflector&lt;/a&gt;, must be knowing that it’s not free anymore. Those who don’t know about Reflector, don’t have to bother much now. You could download dotPeek, an awesome decompiler, which is in the Early Access Program stage. It’s been developed by JetBrains, the maker of Resharper and more developer productivity tools. &lt;/p&gt;
 &lt;p&gt;You can check out what its latest build offer &lt;a href=&#34;http://blogs.jetbrains.com/dotnet/2011/12/dotpeek-is-back-with-new-early-build/&#34;&gt;here&lt;/a&gt; and can download it from &lt;a href=&#34;http://confluence.jetbrains.net/display/NETPEEK/dotPeek+Early+Access+Program&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;In this year, there are more posts related to add-ins and tools, but will have more programming problems and their solutions related posts in coming new year. :)&lt;/p&gt;</description>
     </item>
     <item>
       <title>SQL Server Add-In : SSMS Tools Pack</title>
-      <link>http://localhost:1313/2011/12/sql-server-add-in-ssms-tools-pack.html</link>
+      <link>//localhost:1313/2011/12/sql-server-add-in-ssms-tools-pack.html</link>
       <pubDate>Wed, 14 Dec 2011 23:14:00 +0530</pubDate>
-      <guid>http://localhost:1313/2011/12/sql-server-add-in-ssms-tools-pack.html</guid>
+      <guid>//localhost:1313/2011/12/sql-server-add-in-ssms-tools-pack.html</guid>
       <description>&lt;p&gt;SSMS Tools Pack, I downloaded this free Add-in 3 weeks ago, and I am glad that I did that. Below are the few features that I’ve been using so far :&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;SQL Snippets&lt;/li&gt;
@@ -474,9 +474,9 @@ There are various ways to do it.&lt;/p&gt;
     </item>
     <item>
       <title>Outer joins and search predicates – II</title>
-      <link>http://localhost:1313/2011/07/outer-joins-and-search-predicates-ii.html</link>
+      <link>//localhost:1313/2011/07/outer-joins-and-search-predicates-ii.html</link>
       <pubDate>Sun, 31 Jul 2011 15:51:00 +0530</pubDate>
-      <guid>http://localhost:1313/2011/07/outer-joins-and-search-predicates-ii.html</guid>
+      <guid>//localhost:1313/2011/07/outer-joins-and-search-predicates-ii.html</guid>
       <description>&lt;p&gt;In my &lt;a href=&#34;http://nilthakkar.blogspot.com/2011/07/outer-joins-and-search-predicates.html&#34;&gt;last post&lt;/a&gt; we saw that if we place search predicate in WHERE clause instead of placing it along with ON clause, we may get expected output. Now let&amp;rsquo;s understand what happens behind the scene.&lt;/p&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;Note : we&amp;#39;ll use pubs database for the example. 
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Suppose we want to list down all the book titles, then we might write following query.&lt;/p&gt;
@@ -487,51 +487,51 @@ ORDER BY T.Title
     </item>
     <item>
       <title>Outer joins and search predicates</title>
-      <link>http://localhost:1313/2011/07/outer-joins-and-search-predicates.html</link>
+      <link>//localhost:1313/2011/07/outer-joins-and-search-predicates.html</link>
       <pubDate>Sun, 10 Jul 2011 17:09:00 +0530</pubDate>
-      <guid>http://localhost:1313/2011/07/outer-joins-and-search-predicates.html</guid>
+      <guid>//localhost:1313/2011/07/outer-joins-and-search-predicates.html</guid>
       <description>&lt;p&gt;We often use outer joins to construct queries and get expected output, but what if you get unexpected out and the query seem ok. Few days back I experienced the same thing and found the problem with the placement of predicate (search condition).&lt;/p&gt;
 &lt;p&gt;Let’s take an example :&lt;/p&gt;
 &lt;p&gt;We’ll use Orders and Customers table from Northwind database.&lt;/p&gt;
 &lt;p&gt;Let’s check out INNER JOIN and LEFT JOIN result without any condition first.&lt;/p&gt;
-&lt;p&gt;&lt;img alt=&#34;Withoutcond&#34; loading=&#34;lazy&#34; src=&#34;http://localhost:1313/images/54d04-withoutcond_thumb25255b525255d.jpg&#34;&gt; &lt;/p&gt;</description>
+&lt;p&gt;&lt;img alt=&#34;Withoutcond&#34; loading=&#34;lazy&#34; src=&#34;//localhost:1313/images/54d04-withoutcond_thumb25255b525255d.jpg&#34;&gt; &lt;/p&gt;</description>
     </item>
     <item>
       <title>Microsoft Community Contributor Award 2011</title>
-      <link>http://localhost:1313/2011/06/microsoft-community-contributor-award.html</link>
+      <link>//localhost:1313/2011/06/microsoft-community-contributor-award.html</link>
       <pubDate>Thu, 02 Jun 2011 01:26:00 +0530</pubDate>
-      <guid>http://localhost:1313/2011/06/microsoft-community-contributor-award.html</guid>
+      <guid>//localhost:1313/2011/06/microsoft-community-contributor-award.html</guid>
       <description>&lt;p&gt;I am very happy to announce that I am one of many to receive this award. I consider this an honour to be recognized by Microsoft for my contribution to &lt;a href=&#34;http://forums.asp.net/&#34;&gt;Asp.net Forums&lt;/a&gt; and look forward to continuing the same. Thanks Microsoft!&lt;/p&gt;</description>
     </item>
     <item>
       <title>VS 2010 and ASPX Edit Helper</title>
-      <link>http://localhost:1313/2011/05/vs-2010-and-aspx-edit-helper.html</link>
+      <link>//localhost:1313/2011/05/vs-2010-and-aspx-edit-helper.html</link>
       <pubDate>Thu, 05 May 2011 23:57:00 +0530</pubDate>
-      <guid>http://localhost:1313/2011/05/vs-2010-and-aspx-edit-helper.html</guid>
+      <guid>//localhost:1313/2011/05/vs-2010-and-aspx-edit-helper.html</guid>
       <description>&lt;p&gt;Some of my friend reported that they can’t use &lt;a href=&#34;http://ardentdev.com/aspxedithelper/&#34;&gt;ASPX Edit Helper&lt;/a&gt; with VS 2010 and from the original post it is evident that it works great with VS 2005 and VS 2008.&lt;/p&gt;
 &lt;p&gt;But one of the guy added support for VS 2010 using original souce code. You can download the latest source and binaries (with latest bug fixes) &lt;a href=&#34;http://www.rowlandoconnor.com/2010/04/16/aspx-edit-add-in-for-visual-studio-2010/&#34;&gt;here&lt;/a&gt; and if you’d like to change something, of course you can as source code is available.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Useful Visual Studio Add-Ins</title>
-      <link>http://localhost:1313/2011/04/useful-visual-studio-add-ins.html</link>
+      <link>//localhost:1313/2011/04/useful-visual-studio-add-ins.html</link>
       <pubDate>Sun, 10 Apr 2011 16:40:00 +0530</pubDate>
-      <guid>http://localhost:1313/2011/04/useful-visual-studio-add-ins.html</guid>
+      <guid>//localhost:1313/2011/04/useful-visual-studio-add-ins.html</guid>
       <description>&lt;p&gt;Recently one of the guy asked on Asp.net forum that is there any shortcut key to insert comments above method or function. There’s no exact shortcut but yes, you can insert comment above your method and function by typing 3 slash (///) in c# and 3 single quote in VB and still you’ve to type summary for your method or function to define what it does.&lt;/p&gt;
 &lt;p&gt;But there exists add-in which help you to generate comments with summary on your defined shortcut. Just download &lt;a href=&#34;http://submain.com/products/ghostdoc.aspx&#34;&gt;GhostDoc&lt;/a&gt;, install it and define your short cut. Now whenever you’re required to generate comments, fire your defined shortcut once you’re done with that method or function and it will insert comments with summary.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Mouse Extender : A cozy utility</title>
-      <link>http://localhost:1313/2010/08/mouse-extender-cozy-utility.html</link>
+      <link>//localhost:1313/2010/08/mouse-extender-cozy-utility.html</link>
       <pubDate>Mon, 09 Aug 2010 22:01:00 +0530</pubDate>
-      <guid>http://localhost:1313/2010/08/mouse-extender-cozy-utility.html</guid>
+      <guid>//localhost:1313/2010/08/mouse-extender-cozy-utility.html</guid>
       <description>&lt;p&gt;If you don’t like your desktop covered with so many icons and still want to open your favourite program with ease then Mouse Extender (ME) is the best option for you. I’ve been using it for quite a long time at my home as well as office. You can download it from &lt;a href=&#34;http://me.codeplex.com/&#34;&gt;CodePlex&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;ME is based on WPF and requires .Net Framework 3.5 sp1 to be installed. If you’ve .Net framework installed then it’s good but if not then you can check minimum installation you need &lt;a href=&#34;http://www.hanselman.com/smallestdotnet/&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Update with join and unexpected output</title>
-      <link>http://localhost:1313/2010/03/update-with-join-and-unexpected-output.html</link>
+      <link>//localhost:1313/2010/03/update-with-join-and-unexpected-output.html</link>
       <pubDate>Tue, 30 Mar 2010 23:17:00 +0530</pubDate>
-      <guid>http://localhost:1313/2010/03/update-with-join-and-unexpected-output.html</guid>
+      <guid>//localhost:1313/2010/03/update-with-join-and-unexpected-output.html</guid>
       <description>&lt;p&gt;Recently my one of the colleague was writing trigger and in that he’s having Update Query with join, syntax and everything was right but he’s not getting the expected output.  To understand the situation let’s take an example.&lt;/p&gt;
 &lt;p&gt;Create two temporary tables&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;CREATE&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;TABLE&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;#&lt;/span&gt;tmpTable1
@@ -549,64 +549,64 @@ ORDER BY T.Title
     </item>
     <item>
       <title>SQL Server 2008 : Table Valued Parameter and Merge</title>
-      <link>http://localhost:1313/2009/11/sql-server-2008-table-valued-parameter.html</link>
+      <link>//localhost:1313/2009/11/sql-server-2008-table-valued-parameter.html</link>
       <pubDate>Thu, 19 Nov 2009 22:57:00 +0530</pubDate>
-      <guid>http://localhost:1313/2009/11/sql-server-2008-table-valued-parameter.html</guid>
+      <guid>//localhost:1313/2009/11/sql-server-2008-table-valued-parameter.html</guid>
       <description>&lt;p&gt;Recently I was working on one project and I was supposed to Insert/Update bunch of records in database. I wanted to do it in a single round trip. I Google about it and found out two excellent features of SQL Server 2008: Table Valued Parameter and Merge Statement.&lt;/p&gt;
 &lt;p&gt;Table Valued Parameter allows you to send bunch of records to database in single round trip. To know how it can be done, please refer this &lt;a href=&#34;http://blogs.microsoft.co.il/blogs/bursteg/archive/2007/12/02/sql-server-2008-table-valued-parameters.aspx&#34;&gt;link&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Show Modal Dialog with Asp.net webpage</title>
-      <link>http://localhost:1313/2009/10/show-modal-dialog-with-aspnet-webpage.html</link>
+      <link>//localhost:1313/2009/10/show-modal-dialog-with-aspnet-webpage.html</link>
       <pubDate>Fri, 02 Oct 2009 22:55:00 +0530</pubDate>
-      <guid>http://localhost:1313/2009/10/show-modal-dialog-with-aspnet-webpage.html</guid>
+      <guid>//localhost:1313/2009/10/show-modal-dialog-with-aspnet-webpage.html</guid>
       <description>How to display Modal Dialog with ASP.NET webpage using JavaScript ShowModalDialog method.</description>
     </item>
     <item>
       <title>Generate Nested Gridview Dynamically</title>
-      <link>http://localhost:1313/2009/07/generate-nested-gridview-dynamically.html</link>
+      <link>//localhost:1313/2009/07/generate-nested-gridview-dynamically.html</link>
       <pubDate>Tue, 14 Jul 2009 15:26:00 +0530</pubDate>
-      <guid>http://localhost:1313/2009/07/generate-nested-gridview-dynamically.html</guid>
+      <guid>//localhost:1313/2009/07/generate-nested-gridview-dynamically.html</guid>
       <description>&lt;p&gt;As i said in my last post, I’ll write about how to generate Nested Gridview dynamically. As there are many articles available on the net, let me provide you the link to the article that i referred.&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;http://progtalk.com/ViewArticle.aspx?ArticleID=54&#34;&gt;Gridview Control to show master-child or master-slave data&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;It provides detail explanation with snapshot. There is one disadvantage that Gridview control is available only on client side. It means if you want to perform some action on server side like you want to get child controls Gridview then it’s not possible.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Nested Gridview in Asp.net 2.0</title>
-      <link>http://localhost:1313/2009/05/nested-gridview-in-aspnet-20.html</link>
+      <link>//localhost:1313/2009/05/nested-gridview-in-aspnet-20.html</link>
       <pubDate>Mon, 18 May 2009 23:53:00 +0530</pubDate>
-      <guid>http://localhost:1313/2009/05/nested-gridview-in-aspnet-20.html</guid>
+      <guid>//localhost:1313/2009/05/nested-gridview-in-aspnet-20.html</guid>
       <description>How to create nested GridView in ASP.NET 2.0 with expand/collapse functionality.</description>
     </item>
     <item>
       <title>Retrieve selected treenode value at server side</title>
-      <link>http://localhost:1313/2009/05/retrieve-selected-treenode-value-at.html</link>
+      <link>//localhost:1313/2009/05/retrieve-selected-treenode-value-at.html</link>
       <pubDate>Tue, 05 May 2009 23:28:00 +0530</pubDate>
-      <guid>http://localhost:1313/2009/05/retrieve-selected-treenode-value-at.html</guid>
+      <guid>//localhost:1313/2009/05/retrieve-selected-treenode-value-at.html</guid>
       <description>&lt;p&gt;As I said in my previous post here’s the way to retrieve selected tree node value at the server-side.&lt;/p&gt;
-&lt;p&gt;&lt;img alt=&#34;treeviewcheckbox&#34; loading=&#34;lazy&#34; src=&#34;http://localhost:1313/images/8889f-treeviewcheckbox_thumb.jpg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;treeviewcheckbox&#34; loading=&#34;lazy&#34; src=&#34;//localhost:1313/images/8889f-treeviewcheckbox_thumb.jpg&#34;&gt;&lt;/p&gt;
 &lt;p&gt;In the above image, all the nodes are selected including parent node. In my first &lt;a href=&#34;http://nilthakkar.blogspot.com/2009/03/populate-treeview-with-database-fields.html&#34;&gt;post&lt;/a&gt; we concatenated the value of the parent node with child node and assigned it to child node so that whenever we want to retrieve value of child node, we can have parent node value.&lt;/p&gt;
 &lt;p&gt;Here’s the output of the selected nodes:&lt;/p&gt;</description>
     </item>
     <item>
       <title>TreeView Node Value at Client Side</title>
-      <link>http://localhost:1313/2009/04/treeview-node-value-at-client-side.html</link>
+      <link>//localhost:1313/2009/04/treeview-node-value-at-client-side.html</link>
       <pubDate>Fri, 17 Apr 2009 22:45:00 +0530</pubDate>
-      <guid>http://localhost:1313/2009/04/treeview-node-value-at-client-side.html</guid>
+      <guid>//localhost:1313/2009/04/treeview-node-value-at-client-side.html</guid>
       <description>Retrieve selected ASP.NET TreeView node text and value on the client side.</description>
     </item>
     <item>
       <title>Check Uncheck Treeview Checkboxes with Javascript</title>
-      <link>http://localhost:1313/2009/04/check-uncheck-treeview-checkboxes-with_13.html</link>
+      <link>//localhost:1313/2009/04/check-uncheck-treeview-checkboxes-with_13.html</link>
       <pubDate>Mon, 13 Apr 2009 00:23:00 +0530</pubDate>
-      <guid>http://localhost:1313/2009/04/check-uncheck-treeview-checkboxes-with_13.html</guid>
+      <guid>//localhost:1313/2009/04/check-uncheck-treeview-checkboxes-with_13.html</guid>
       <description>Client script to check or uncheck ASP.NET TreeView checkboxes and keep parents and children in sync.</description>
     </item>
     <item>
       <title>Populate Treeview With Database Fields</title>
-      <link>http://localhost:1313/2009/03/populate-treeview-with-database-fields.html</link>
+      <link>//localhost:1313/2009/03/populate-treeview-with-database-fields.html</link>
       <pubDate>Thu, 26 Mar 2009 22:04:00 +0530</pubDate>
-      <guid>http://localhost:1313/2009/03/populate-treeview-with-database-fields.html</guid>
+      <guid>//localhost:1313/2009/03/populate-treeview-with-database-fields.html</guid>
       <description>&lt;p&gt;This post describes how to populate treeview with database fields. People often required to populate treeview with database fields and they choose different approaches to make it work. Here I am going to describe the simplest way.&lt;/p&gt;
 &lt;p&gt;Here I&amp;rsquo;ll be using Sql Server Sample Database: Pubs&lt;/p&gt;
 &lt;p&gt;Relations:&lt;/p&gt;
@@ -675,17 +675,17 @@ VB Code :&lt;/p&gt;
     </item>
     <item>
       <title>Ubuntu 8.10, blank screen shows after login screen</title>
-      <link>http://localhost:1313/2009/03/ubuntu-810-blank-screen-shows-after.html</link>
+      <link>//localhost:1313/2009/03/ubuntu-810-blank-screen-shows-after.html</link>
       <pubDate>Sun, 15 Mar 2009 14:42:00 +0530</pubDate>
-      <guid>http://localhost:1313/2009/03/ubuntu-810-blank-screen-shows-after.html</guid>
+      <guid>//localhost:1313/2009/03/ubuntu-810-blank-screen-shows-after.html</guid>
       <description>&lt;p&gt;Recently i installed Ubuntu 8.10 (Intrepid Ibex) on my machine. After loging in i got only brown blank screen and i couldn&amp;rsquo;t do anything except moving mouse around the screen. I thought i didn&amp;rsquo;t installed it properly, so i reinstalled it twice. Finally i found out the solution. It happened because graphic card can not handle the compiz effects.&lt;/p&gt;
 &lt;p&gt;There is a bug in the Intel Video driver for the Intel 830MG and 845G video cards. Desktop effects with Compiz will not work on those chips and freeze the system. During that time keyboard too won&amp;rsquo;t work (meaning Numlock doens&amp;rsquo;t work), just to be sure, are you able to get to consoles (ctrl+alt+f1)? If that too doesn&amp;rsquo;t work, it&amp;rsquo;s probably your kernel crashing.&lt;/p&gt;</description>
     </item>
     <item>
       <title>.Net Frameworks and Silverlight</title>
-      <link>http://localhost:1313/2009/01/net-frameworks-and-silverlight.html</link>
+      <link>//localhost:1313/2009/01/net-frameworks-and-silverlight.html</link>
       <pubDate>Thu, 29 Jan 2009 23:57:00 +0530</pubDate>
-      <guid>http://localhost:1313/2009/01/net-frameworks-and-silverlight.html</guid>
+      <guid>//localhost:1313/2009/01/net-frameworks-and-silverlight.html</guid>
       <description>&lt;p&gt;Friends as I said that I will post  about topics that often surfaces on Asp.net Forums as well as Orkut Communities. So here&amp;rsquo;s one of the question I came across:&lt;/p&gt;
 &lt;p&gt;Is it possible to Use SilverLight with Asp.net 2.0?&lt;/p&gt;
 &lt;p&gt;Answer : No&lt;/p&gt;
@@ -693,40 +693,40 @@ VB Code :&lt;/p&gt;
     </item>
     <item>
       <title>Add Windows XP entry to GRUB</title>
-      <link>http://localhost:1313/2009/01/add-windows-xp-entry-to-grub.html</link>
+      <link>//localhost:1313/2009/01/add-windows-xp-entry-to-grub.html</link>
       <pubDate>Thu, 22 Jan 2009 22:13:00 +0530</pubDate>
-      <guid>http://localhost:1313/2009/01/add-windows-xp-entry-to-grub.html</guid>
+      <guid>//localhost:1313/2009/01/add-windows-xp-entry-to-grub.html</guid>
       <description>&lt;p&gt;This time i am writing this post for those who are new to Linux environment just like me. Few Days back my one of the friend helped me to make my Windows XP default operating system when it boots. But it was not done properly so i decided to solve the problem. For Adding/ Changing boot option, one has to change the settings in the Menu.lst file in Linux (Mine is Ubuntu 7.10).&lt;/p&gt;</description>
     </item>
     <item>
       <title>Google SMS Channel</title>
-      <link>http://localhost:1313/2008/11/google-sms-channel.html</link>
+      <link>//localhost:1313/2008/11/google-sms-channel.html</link>
       <pubDate>Fri, 14 Nov 2008 17:15:00 +0530</pubDate>
-      <guid>http://localhost:1313/2008/11/google-sms-channel.html</guid>
+      <guid>//localhost:1313/2008/11/google-sms-channel.html</guid>
       <description>&lt;p&gt;Google India labs has introduced New Product &amp;ldquo;&lt;a href=&#34;http://labs.google.co.in/smschannels&#34;&gt;Google SMS Channel&lt;/a&gt;&amp;rdquo; that let you subscribe to blog updates, Cricket and news alerts and daily horoscope, jokes etc for free.&lt;/p&gt;
 &lt;p&gt;One can create his own channel and others can subscribe to it and can share important information related to their group. For creating such channel you need Google account. when you start your own channel you are supposed to provide your Moblie No (Cell No)and you will receive one code. After receiving that code enter that code and start channel. you have privileges to restrict others from spamming on group.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Validation in Updatepanel</title>
-      <link>http://localhost:1313/2008/10/validation-in-updatepanel.html</link>
+      <link>//localhost:1313/2008/10/validation-in-updatepanel.html</link>
       <pubDate>Mon, 13 Oct 2008 14:42:00 +0530</pubDate>
-      <guid>http://localhost:1313/2008/10/validation-in-updatepanel.html</guid>
+      <guid>//localhost:1313/2008/10/validation-in-updatepanel.html</guid>
       <description>How to use validation controls with ASP.NET UpdatePanel control.</description>
     </item>
     <item>
       <title>Web 2.0</title>
-      <link>http://localhost:1313/2008/09/web-20.html</link>
+      <link>//localhost:1313/2008/09/web-20.html</link>
       <pubDate>Wed, 24 Sep 2008 14:20:00 +0530</pubDate>
-      <guid>http://localhost:1313/2008/09/web-20.html</guid>
+      <guid>//localhost:1313/2008/09/web-20.html</guid>
       <description>&lt;p&gt;Hello everyone, this is my first post and here i am going to write nothing new and you might have come across similar kind of post related to Web 2.0 in the ocean of internet while surfing but for many people this is something new because they are beginner and didn&amp;rsquo;t try to know about it so let&amp;rsquo;s start with it.&lt;/p&gt;
 &lt;p&gt;what is web 2.0?&lt;/p&gt;
 &lt;p&gt;Web 2.0 is not a technology but it does indicate changing trends in the use of world wide web and web design that aims to enhance creativity, information sharing and most notably collaboration among users.&lt;/p&gt;</description>
     </item>
     <item>
       <title>About Me</title>
-      <link>http://localhost:1313/about/</link>
+      <link>//localhost:1313/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/about/</guid>
+      <guid>//localhost:1313/about/</guid>
       <description>About Nilesh Thakkar</description>
     </item>
   </channel>

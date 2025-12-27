@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>VS 2008 on Nilesh Thakkar</title>
-    <link>http://localhost:1313/tags/vs-2008/</link>
+    <link>//localhost:1313/tags/vs-2008/</link>
     <description>Recent content in VS 2008 on Nilesh Thakkar</description>
     <generator>Hugo -- 0.153.3</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 10 Apr 2011 16:40:00 +0530</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/vs-2008/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//localhost:1313/tags/vs-2008/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Useful Visual Studio Add-Ins</title>
-      <link>http://localhost:1313/2011/04/useful-visual-studio-add-ins.html</link>
+      <link>//localhost:1313/2011/04/useful-visual-studio-add-ins.html</link>
       <pubDate>Sun, 10 Apr 2011 16:40:00 +0530</pubDate>
-      <guid>http://localhost:1313/2011/04/useful-visual-studio-add-ins.html</guid>
+      <guid>//localhost:1313/2011/04/useful-visual-studio-add-ins.html</guid>
       <description>&lt;p&gt;Recently one of the guy asked on Asp.net forum that is there any shortcut key to insert comments above method or function. There’s no exact shortcut but yes, you can insert comment above your method and function by typing 3 slash (///) in c# and 3 single quote in VB and still you’ve to type summary for your method or function to define what it does.&lt;/p&gt;
 &lt;p&gt;But there exists add-in which help you to generate comments with summary on your defined shortcut. Just download &lt;a href=&#34;http://submain.com/products/ghostdoc.aspx&#34;&gt;GhostDoc&lt;/a&gt;, install it and define your short cut. Now whenever you’re required to generate comments, fire your defined shortcut once you’re done with that method or function and it will insert comments with summary.&lt;/p&gt;</description>
     </item>

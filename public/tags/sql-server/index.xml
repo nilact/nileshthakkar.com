@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>SQL Server on Nilesh Thakkar</title>
-    <link>http://localhost:1313/tags/sql-server/</link>
+    <link>//localhost:1313/tags/sql-server/</link>
     <description>Recent content in SQL Server on Nilesh Thakkar</description>
     <generator>Hugo -- 0.153.3</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 08 May 2012 01:14:00 +0530</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/sql-server/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//localhost:1313/tags/sql-server/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>How to pass multiple records to stored procedure in Asp.net?</title>
-      <link>http://localhost:1313/2012/05/how-to-pass-multiple-records-to-stored.html</link>
+      <link>//localhost:1313/2012/05/how-to-pass-multiple-records-to-stored.html</link>
       <pubDate>Tue, 08 May 2012 01:14:00 +0530</pubDate>
-      <guid>http://localhost:1313/2012/05/how-to-pass-multiple-records-to-stored.html</guid>
+      <guid>//localhost:1313/2012/05/how-to-pass-multiple-records-to-stored.html</guid>
       <description>&lt;p&gt;There are mainly three ways you can pass multiple records to stored procedure.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Comma delimited string:  It is suitable for the scenario where you need to pass single column value&lt;/li&gt;
@@ -23,25 +23,25 @@
     </item>
     <item>
       <title>Tip: Schema qualify database objects</title>
-      <link>http://localhost:1313/2012/02/tip-schema-qualify-database-objects.html</link>
+      <link>//localhost:1313/2012/02/tip-schema-qualify-database-objects.html</link>
       <pubDate>Mon, 13 Feb 2012 19:45:00 +0530</pubDate>
-      <guid>http://localhost:1313/2012/02/tip-schema-qualify-database-objects.html</guid>
+      <guid>//localhost:1313/2012/02/tip-schema-qualify-database-objects.html</guid>
       <description>&lt;p&gt;When working in a team, it may happen that few of the team mates follow best practices and others don’t give damn about it. They just completes the tasks on the name of ‘getting things done’. It may create nightmares if all the team members don’t follow the best practices. Either do it or don’t.&lt;/p&gt;
 &lt;p&gt;Let’s see what can happen with below example.&lt;/p&gt;
 &lt;p&gt;In one of the project, an SP was created with prefix .dbo and it was working fine until changes came. Now one of the team member made changes and whole team had the feeling “all is well” until that SP was not returning the expected output. So you start debugging your app and consider the following could be the issue.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Specify size for character data type</title>
-      <link>http://localhost:1313/2012/01/specify-size-for-character-data-type.html</link>
+      <link>//localhost:1313/2012/01/specify-size-for-character-data-type.html</link>
       <pubDate>Mon, 16 Jan 2012 22:39:00 +0530</pubDate>
-      <guid>http://localhost:1313/2012/01/specify-size-for-character-data-type.html</guid>
+      <guid>//localhost:1313/2012/01/specify-size-for-character-data-type.html</guid>
       <description>&lt;p&gt;Recently I was referring books online to confirm one strange behavior in SQL Server. It was like in one of the legacy application, string was passed to stored procedure as parameter and it was storing only 30 characters. To my surprise when I saw the code, everything seem to be ok. Later on found out the problem and fault was while converting parameter to varchar there was no size defined.&lt;/p&gt;</description>
     </item>
     <item>
       <title>SQL Server Add-In : SSMS Tools Pack</title>
-      <link>http://localhost:1313/2011/12/sql-server-add-in-ssms-tools-pack.html</link>
+      <link>//localhost:1313/2011/12/sql-server-add-in-ssms-tools-pack.html</link>
       <pubDate>Wed, 14 Dec 2011 23:14:00 +0530</pubDate>
-      <guid>http://localhost:1313/2011/12/sql-server-add-in-ssms-tools-pack.html</guid>
+      <guid>//localhost:1313/2011/12/sql-server-add-in-ssms-tools-pack.html</guid>
       <description>&lt;p&gt;SSMS Tools Pack, I downloaded this free Add-in 3 weeks ago, and I am glad that I did that. Below are the few features that I’ve been using so far :&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;SQL Snippets&lt;/li&gt;
@@ -55,9 +55,9 @@
     </item>
     <item>
       <title>Outer joins and search predicates – II</title>
-      <link>http://localhost:1313/2011/07/outer-joins-and-search-predicates-ii.html</link>
+      <link>//localhost:1313/2011/07/outer-joins-and-search-predicates-ii.html</link>
       <pubDate>Sun, 31 Jul 2011 15:51:00 +0530</pubDate>
-      <guid>http://localhost:1313/2011/07/outer-joins-and-search-predicates-ii.html</guid>
+      <guid>//localhost:1313/2011/07/outer-joins-and-search-predicates-ii.html</guid>
       <description>&lt;p&gt;In my &lt;a href=&#34;http://nilthakkar.blogspot.com/2011/07/outer-joins-and-search-predicates.html&#34;&gt;last post&lt;/a&gt; we saw that if we place search predicate in WHERE clause instead of placing it along with ON clause, we may get expected output. Now let&amp;rsquo;s understand what happens behind the scene.&lt;/p&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;Note : we&amp;#39;ll use pubs database for the example. 
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Suppose we want to list down all the book titles, then we might write following query.&lt;/p&gt;
@@ -68,20 +68,20 @@ ORDER BY T.Title
     </item>
     <item>
       <title>Outer joins and search predicates</title>
-      <link>http://localhost:1313/2011/07/outer-joins-and-search-predicates.html</link>
+      <link>//localhost:1313/2011/07/outer-joins-and-search-predicates.html</link>
       <pubDate>Sun, 10 Jul 2011 17:09:00 +0530</pubDate>
-      <guid>http://localhost:1313/2011/07/outer-joins-and-search-predicates.html</guid>
+      <guid>//localhost:1313/2011/07/outer-joins-and-search-predicates.html</guid>
       <description>&lt;p&gt;We often use outer joins to construct queries and get expected output, but what if you get unexpected out and the query seem ok. Few days back I experienced the same thing and found the problem with the placement of predicate (search condition).&lt;/p&gt;
 &lt;p&gt;Let’s take an example :&lt;/p&gt;
 &lt;p&gt;We’ll use Orders and Customers table from Northwind database.&lt;/p&gt;
 &lt;p&gt;Let’s check out INNER JOIN and LEFT JOIN result without any condition first.&lt;/p&gt;
-&lt;p&gt;&lt;img alt=&#34;Withoutcond&#34; loading=&#34;lazy&#34; src=&#34;http://localhost:1313/images/54d04-withoutcond_thumb25255b525255d.jpg&#34;&gt; &lt;/p&gt;</description>
+&lt;p&gt;&lt;img alt=&#34;Withoutcond&#34; loading=&#34;lazy&#34; src=&#34;//localhost:1313/images/54d04-withoutcond_thumb25255b525255d.jpg&#34;&gt; &lt;/p&gt;</description>
     </item>
     <item>
       <title>Update with join and unexpected output</title>
-      <link>http://localhost:1313/2010/03/update-with-join-and-unexpected-output.html</link>
+      <link>//localhost:1313/2010/03/update-with-join-and-unexpected-output.html</link>
       <pubDate>Tue, 30 Mar 2010 23:17:00 +0530</pubDate>
-      <guid>http://localhost:1313/2010/03/update-with-join-and-unexpected-output.html</guid>
+      <guid>//localhost:1313/2010/03/update-with-join-and-unexpected-output.html</guid>
       <description>&lt;p&gt;Recently my one of the colleague was writing trigger and in that he’s having Update Query with join, syntax and everything was right but he’s not getting the expected output.  To understand the situation let’s take an example.&lt;/p&gt;
 &lt;p&gt;Create two temporary tables&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;CREATE&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;TABLE&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;#&lt;/span&gt;tmpTable1
@@ -99,9 +99,9 @@ ORDER BY T.Title
     </item>
     <item>
       <title>SQL Server 2008 : Table Valued Parameter and Merge</title>
-      <link>http://localhost:1313/2009/11/sql-server-2008-table-valued-parameter.html</link>
+      <link>//localhost:1313/2009/11/sql-server-2008-table-valued-parameter.html</link>
       <pubDate>Thu, 19 Nov 2009 22:57:00 +0530</pubDate>
-      <guid>http://localhost:1313/2009/11/sql-server-2008-table-valued-parameter.html</guid>
+      <guid>//localhost:1313/2009/11/sql-server-2008-table-valued-parameter.html</guid>
       <description>&lt;p&gt;Recently I was working on one project and I was supposed to Insert/Update bunch of records in database. I wanted to do it in a single round trip. I Google about it and found out two excellent features of SQL Server 2008: Table Valued Parameter and Merge Statement.&lt;/p&gt;
 &lt;p&gt;Table Valued Parameter allows you to send bunch of records to database in single round trip. To know how it can be done, please refer this &lt;a href=&#34;http://blogs.microsoft.co.il/blogs/bursteg/archive/2007/12/02/sql-server-2008-table-valued-parameters.aspx&#34;&gt;link&lt;/a&gt;&lt;/p&gt;</description>
     </item>

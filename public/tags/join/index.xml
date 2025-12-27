@@ -2,28 +2,28 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Join on Nilesh Thakkar</title>
-    <link>http://localhost:1313/tags/join/</link>
+    <link>//localhost:1313/tags/join/</link>
     <description>Recent content in Join on Nilesh Thakkar</description>
     <generator>Hugo -- 0.153.3</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 10 Jul 2011 17:09:00 +0530</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/join/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//localhost:1313/tags/join/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Outer joins and search predicates</title>
-      <link>http://localhost:1313/2011/07/outer-joins-and-search-predicates.html</link>
+      <link>//localhost:1313/2011/07/outer-joins-and-search-predicates.html</link>
       <pubDate>Sun, 10 Jul 2011 17:09:00 +0530</pubDate>
-      <guid>http://localhost:1313/2011/07/outer-joins-and-search-predicates.html</guid>
+      <guid>//localhost:1313/2011/07/outer-joins-and-search-predicates.html</guid>
       <description>&lt;p&gt;We often use outer joins to construct queries and get expected output, but what if you get unexpected out and the query seem ok. Few days back I experienced the same thing and found the problem with the placement of predicate (search condition).&lt;/p&gt;
 &lt;p&gt;Let’s take an example :&lt;/p&gt;
 &lt;p&gt;We’ll use Orders and Customers table from Northwind database.&lt;/p&gt;
 &lt;p&gt;Let’s check out INNER JOIN and LEFT JOIN result without any condition first.&lt;/p&gt;
-&lt;p&gt;&lt;img alt=&#34;Withoutcond&#34; loading=&#34;lazy&#34; src=&#34;http://localhost:1313/images/54d04-withoutcond_thumb25255b525255d.jpg&#34;&gt; &lt;/p&gt;</description>
+&lt;p&gt;&lt;img alt=&#34;Withoutcond&#34; loading=&#34;lazy&#34; src=&#34;//localhost:1313/images/54d04-withoutcond_thumb25255b525255d.jpg&#34;&gt; &lt;/p&gt;</description>
     </item>
     <item>
       <title>Update with join and unexpected output</title>
-      <link>http://localhost:1313/2010/03/update-with-join-and-unexpected-output.html</link>
+      <link>//localhost:1313/2010/03/update-with-join-and-unexpected-output.html</link>
       <pubDate>Tue, 30 Mar 2010 23:17:00 +0530</pubDate>
-      <guid>http://localhost:1313/2010/03/update-with-join-and-unexpected-output.html</guid>
+      <guid>//localhost:1313/2010/03/update-with-join-and-unexpected-output.html</guid>
       <description>&lt;p&gt;Recently my one of the colleague was writing trigger and in that he’s having Update Query with join, syntax and everything was right but he’s not getting the expected output.  To understand the situation let’s take an example.&lt;/p&gt;
 &lt;p&gt;Create two temporary tables&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;CREATE&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;TABLE&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;#&lt;/span&gt;tmpTable1

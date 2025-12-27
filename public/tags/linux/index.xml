@@ -2,25 +2,25 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Linux on Nilesh Thakkar</title>
-    <link>http://localhost:1313/tags/linux/</link>
+    <link>//localhost:1313/tags/linux/</link>
     <description>Recent content in Linux on Nilesh Thakkar</description>
     <generator>Hugo -- 0.153.3</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 15 Mar 2009 14:42:00 +0530</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//localhost:1313/tags/linux/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Ubuntu 8.10, blank screen shows after login screen</title>
-      <link>http://localhost:1313/2009/03/ubuntu-810-blank-screen-shows-after.html</link>
+      <link>//localhost:1313/2009/03/ubuntu-810-blank-screen-shows-after.html</link>
       <pubDate>Sun, 15 Mar 2009 14:42:00 +0530</pubDate>
-      <guid>http://localhost:1313/2009/03/ubuntu-810-blank-screen-shows-after.html</guid>
+      <guid>//localhost:1313/2009/03/ubuntu-810-blank-screen-shows-after.html</guid>
       <description>&lt;p&gt;Recently i installed Ubuntu 8.10 (Intrepid Ibex) on my machine. After loging in i got only brown blank screen and i couldn&amp;rsquo;t do anything except moving mouse around the screen. I thought i didn&amp;rsquo;t installed it properly, so i reinstalled it twice. Finally i found out the solution. It happened because graphic card can not handle the compiz effects.&lt;/p&gt;
 &lt;p&gt;There is a bug in the Intel Video driver for the Intel 830MG and 845G video cards. Desktop effects with Compiz will not work on those chips and freeze the system. During that time keyboard too won&amp;rsquo;t work (meaning Numlock doens&amp;rsquo;t work), just to be sure, are you able to get to consoles (ctrl+alt+f1)? If that too doesn&amp;rsquo;t work, it&amp;rsquo;s probably your kernel crashing.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Add Windows XP entry to GRUB</title>
-      <link>http://localhost:1313/2009/01/add-windows-xp-entry-to-grub.html</link>
+      <link>//localhost:1313/2009/01/add-windows-xp-entry-to-grub.html</link>
       <pubDate>Thu, 22 Jan 2009 22:13:00 +0530</pubDate>
-      <guid>http://localhost:1313/2009/01/add-windows-xp-entry-to-grub.html</guid>
+      <guid>//localhost:1313/2009/01/add-windows-xp-entry-to-grub.html</guid>
       <description>&lt;p&gt;This time i am writing this post for those who are new to Linux environment just like me. Few Days back my one of the friend helped me to make my Windows XP default operating system when it boots. But it was not done properly so i decided to solve the problem. For Adding/ Changing boot option, one has to change the settings in the Menu.lst file in Linux (Mine is Ubuntu 7.10).&lt;/p&gt;</description>
     </item>
   </channel>
