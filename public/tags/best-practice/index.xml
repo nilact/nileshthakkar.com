@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Best Practice on Nilesh Thakkar</title>
+    <link>http://localhost:1313/tags/best-practice/</link>
+    <description>Recent content in Best Practice on Nilesh Thakkar</description>
+    <generator>Hugo -- 0.153.3</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 13 Feb 2012 19:45:00 +0530</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/best-practice/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Tip: Schema qualify database objects</title>
+      <link>http://localhost:1313/2012/02/tip-schema-qualify-database-objects.html</link>
+      <pubDate>Mon, 13 Feb 2012 19:45:00 +0530</pubDate>
+      <guid>http://localhost:1313/2012/02/tip-schema-qualify-database-objects.html</guid>
+      <description>&lt;p&gt;When working in a team, it may happen that few of the team mates follow best practices and others don’t give damn about it. They just completes the tasks on the name of ‘getting things done’. It may create nightmares if all the team members don’t follow the best practices. Either do it or don’t.&lt;/p&gt;
+&lt;p&gt;Let’s see what can happen with below example.&lt;/p&gt;
+&lt;p&gt;In one of the project, an SP was created with prefix .dbo and it was working fine until changes came. Now one of the team member made changes and whole team had the feeling “all is well” until that SP was not returning the expected output. So you start debugging your app and consider the following could be the issue.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

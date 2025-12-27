@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Updatepanel on Nilesh Thakkar</title>
+    <link>http://localhost:1313/tags/updatepanel/</link>
+    <description>Recent content in Updatepanel on Nilesh Thakkar</description>
+    <generator>Hugo -- 0.153.3</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 13 Oct 2008 14:42:00 +0530</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/updatepanel/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Validation in Updatepanel</title>
+      <link>http://localhost:1313/2008/10/validation-in-updatepanel.html</link>
+      <pubDate>Mon, 13 Oct 2008 14:42:00 +0530</pubDate>
+      <guid>http://localhost:1313/2008/10/validation-in-updatepanel.html</guid>
+      <description>How to use validation controls with ASP.NET UpdatePanel control.</description>
+    </item>
+  </channel>
+</rss>

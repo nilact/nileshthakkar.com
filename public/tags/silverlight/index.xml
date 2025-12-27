@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Silverlight on Nilesh Thakkar</title>
+    <link>http://localhost:1313/tags/silverlight/</link>
+    <description>Recent content in Silverlight on Nilesh Thakkar</description>
+    <generator>Hugo -- 0.153.3</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 29 Jan 2009 23:57:00 +0530</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/silverlight/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>.Net Frameworks and Silverlight</title>
+      <link>http://localhost:1313/2009/01/net-frameworks-and-silverlight.html</link>
+      <pubDate>Thu, 29 Jan 2009 23:57:00 +0530</pubDate>
+      <guid>http://localhost:1313/2009/01/net-frameworks-and-silverlight.html</guid>
+      <description>&lt;p&gt;Friends as I said that I will post  about topics that often surfaces on Asp.net Forums as well as Orkut Communities. So here&amp;rsquo;s one of the question I came across:&lt;/p&gt;
+&lt;p&gt;Is it possible to Use SilverLight with Asp.net 2.0?&lt;/p&gt;
+&lt;p&gt;Answer : No&lt;/p&gt;
+&lt;p&gt;You can not use it directly with Framework 2.0 but of course you can use it with Framework 3.0 and 3.5. But in a way if you want to use Silverlight with your application developed with framework 2.0 then you just have to compile all the Silverlight files in Framework 3.5 and add reference of it in your application. That&amp;rsquo;s It!!&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

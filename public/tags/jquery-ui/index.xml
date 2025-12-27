@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Jquery UI on Nilesh Thakkar</title>
+    <link>http://localhost:1313/tags/jquery-ui/</link>
+    <description>Recent content in Jquery UI on Nilesh Thakkar</description>
+    <generator>Hugo -- 0.153.3</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 16 Jan 2014 16:25:00 +0530</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/jquery-ui/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>JQuery UI AutoComplete TextBox from Database using PageMethod in ASP.Net</title>
+      <link>http://localhost:1313/2014/01/jquery-ui-autocomplete-textbox-from.html</link>
+      <pubDate>Thu, 16 Jan 2014 16:25:00 +0530</pubDate>
+      <guid>http://localhost:1313/2014/01/jquery-ui-autocomplete-textbox-from.html</guid>
+      <description>&lt;p&gt;In this post we’ll see how to user Jquery UI Autocomplete with asp.net pagemethod.&lt;/p&gt;
+&lt;p&gt;For database, we’ll be using &lt;a href=&#34;http://northwinddatabase.codeplex.com/releases/view/71634&#34;&gt;Northwind&lt;/a&gt; database.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;PageMethod:&lt;/strong&gt;&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;\[ScriptMethod(ResponseFormat= ResponseFormat.Json)\]
+    \[WebMethod\]
+    public static List&amp;lt;AutoCompleteHelper&amp;gt; GetEmployee(string searchText)
+    {
+        using (SqlConnection conn = new SqlConnection())
+        {
+            conn.ConnectionString = ConfigurationManager
+                    .ConnectionStrings\[&amp;#34;NorthwindConnectionString&amp;#34;\].ConnectionString;
+            using (SqlCommand cmd = new SqlCommand())
+            {
+                cmd.CommandText = &amp;#34;select CustomerID,ContactName from Customers where &amp;#34; +
+                &amp;#34;ContactName like @SearchText + &amp;#39;%&amp;#39;&amp;#34;;
+                cmd.Parameters.AddWithValue(&amp;#34;@SearchText&amp;#34;, searchText);
+                cmd.Connection = conn;
+                List&amp;lt;AutoCompleteHelper&amp;gt; listAutoCompleteHelper = new List&amp;lt;AutoCompleteHelper&amp;gt;();
+                conn.Open();
+                using (SqlDataReader sdr = cmd.ExecuteReader())
+                {
+                    while (sdr.Read())
+                    {
+                        AutoCompleteHelper objCompleteHelper = new AutoCompleteHelper();
+                        objCompleteHelper.displayText = Convert.ToString(sdr\[&amp;#34;ContactName&amp;#34;\]);
+                        objCompleteHelper.displayValue = Convert.ToString(sdr\[&amp;#34;CustomerID&amp;#34;\]);
+                        listAutoCompleteHelper.Add(objCompleteHelper);
+                        
+                    }
+                }
+                conn.Close();
+                Thread.Sleep(3000);
+                return listAutoCompleteHelper;
+            }
+        }
+    }
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;In above code, we’re fetching data from customer table from northwind database based on text entered by user. You may want to have this code in separate (data access) layer and must use stored procedure rather than inline query, I’ve included this code just for demonstration purpose.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

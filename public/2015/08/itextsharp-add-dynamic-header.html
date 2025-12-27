@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto" data-theme="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>iTextSharp: Add dynamic header | Nilesh Thakkar</title>
+<meta name="keywords" content="Asp.net, Itextsharp">
+<meta name="description" content="Note: If you have not gone through my previous post iTextSharp–Add header/footer to PDF , please go through it.
+Most of the time we&rsquo;ll require to print dynamic value in header. i.e. Company Name etc.
+You can create properties in PageEvent class that inherits PdfPageEventHelper class.
+public class ITextEvents : PdfPageEventHelper
+{
+
+   #region Fields
+        private string \_header;
+        #endregion
+
+        #region Properties
+        public string Header
+        {
+            get { return \_header; }
+            set { \_header = value; }
+        }
+        #endregion
+
+
+ public override void OnEndPage(iTextSharp.text.pdf.PdfWriter writer, iTextSharp.text.Document document)
+        {
+            base.OnEndPage(writer, document);
+
+            iTextSharp.text.Font baseFontNormal = new iTextSharp.text.Font(iTextSharp.text.Font.FontFamily.HELVETICA, 12f, iTextSharp.text.Font.NORMAL, iTextSharp.text.BaseColor.BLACK);
+
+            Phrase p1Header = new Phrase(Header, baseFontNormal);
+
+       //Other Code here that adds header. Refer previous article
+
+    }
+
+}
+Now add below code to your code from where you&rsquo;re generating PDF:">
+<meta name="author" content="Nilesh Thakkar">
+<link rel="canonical" href="http://localhost:1313/2015/08/itextsharp-add-dynamic-header.html">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.d2a1eb8f7c6b93d414a5761b6f17d45a647cc163f0a2fdf76ec650437153a2e8.css" integrity="sha256-0qHrj3xrk9QUpXYbbxfUWmR8wWPwov33bsZQQ3FToug=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/2015/08/itextsharp-add-dynamic-header.html">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            .list::-webkit-scrollbar-thumb {
+                border-color: var(--code-bg);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script><meta property="og:url" content="http://localhost:1313/2015/08/itextsharp-add-dynamic-header.html">
+  <meta property="og:site_name" content="Nilesh Thakkar">
+  <meta property="og:title" content="iTextSharp: Add dynamic header">
+  <meta property="og:description" content="Note: If you have not gone through my previous post iTextSharp–Add header/footer to PDF , please go through it.
+Most of the time we’ll require to print dynamic value in header. i.e. Company Name etc.
+You can create properties in PageEvent class that inherits PdfPageEventHelper class.
+public class ITextEvents : PdfPageEventHelper { #region Fields private string \_header; #endregion #region Properties public string Header { get { return \_header; } set { \_header = value; } } #endregion public override void OnEndPage(iTextSharp.text.pdf.PdfWriter writer, iTextSharp.text.Document document) { base.OnEndPage(writer, document); iTextSharp.text.Font baseFontNormal = new iTextSharp.text.Font(iTextSharp.text.Font.FontFamily.HELVETICA, 12f, iTextSharp.text.Font.NORMAL, iTextSharp.text.BaseColor.BLACK); Phrase p1Header = new Phrase(Header, baseFontNormal); //Other Code here that adds header. Refer previous article } } Now add below code to your code from where you’re generating PDF:">
+  <meta property="og:locale" content="en-us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2015-08-18T00:18:00+05:30">
+    <meta property="article:modified_time" content="2015-08-18T00:18:00+05:30">
+    <meta property="article:tag" content="Asp.net">
+    <meta property="article:tag" content="Itextsharp">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="iTextSharp: Add dynamic header">
+<meta name="twitter:description" content="Note: If you have not gone through my previous post iTextSharp–Add header/footer to PDF , please go through it.
+Most of the time we&rsquo;ll require to print dynamic value in header. i.e. Company Name etc.
+You can create properties in PageEvent class that inherits PdfPageEventHelper class.
+public class ITextEvents : PdfPageEventHelper
+{
+
+   #region Fields
+        private string \_header;
+        #endregion
+
+        #region Properties
+        public string Header
+        {
+            get { return \_header; }
+            set { \_header = value; }
+        }
+        #endregion
+
+
+ public override void OnEndPage(iTextSharp.text.pdf.PdfWriter writer, iTextSharp.text.Document document)
+        {
+            base.OnEndPage(writer, document);
+
+            iTextSharp.text.Font baseFontNormal = new iTextSharp.text.Font(iTextSharp.text.Font.FontFamily.HELVETICA, 12f, iTextSharp.text.Font.NORMAL, iTextSharp.text.BaseColor.BLACK);
+
+            Phrase p1Header = new Phrase(Header, baseFontNormal);
+
+       //Other Code here that adds header. Refer previous article
+
+    }
+
+}
+Now add below code to your code from where you&rsquo;re generating PDF:">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "http://localhost:1313/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "iTextSharp: Add dynamic header",
+      "item": "http://localhost:1313/2015/08/itextsharp-add-dynamic-header.html"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "iTextSharp: Add dynamic header",
+  "name": "iTextSharp: Add dynamic header",
+  "description": "Note: If you have not gone through my previous post iTextSharp–Add header/footer to PDF , please go through it.\nMost of the time we\u0026rsquo;ll require to print dynamic value in header. i.e. Company Name etc.\nYou can create properties in PageEvent class that inherits PdfPageEventHelper class.\npublic class ITextEvents : PdfPageEventHelper { #region Fields private string \\_header; #endregion #region Properties public string Header { get { return \\_header; } set { \\_header = value; } } #endregion public override void OnEndPage(iTextSharp.text.pdf.PdfWriter writer, iTextSharp.text.Document document) { base.OnEndPage(writer, document); iTextSharp.text.Font baseFontNormal = new iTextSharp.text.Font(iTextSharp.text.Font.FontFamily.HELVETICA, 12f, iTextSharp.text.Font.NORMAL, iTextSharp.text.BaseColor.BLACK); Phrase p1Header = new Phrase(Header, baseFontNormal); //Other Code here that adds header. Refer previous article } } Now add below code to your code from where you\u0026rsquo;re generating PDF:\n",
+  "keywords": [
+    "Asp.net", "Itextsharp"
+  ],
+  "articleBody": "Note: If you have not gone through my previous post iTextSharp–Add header/footer to PDF , please go through it.\nMost of the time we’ll require to print dynamic value in header. i.e. Company Name etc.\nYou can create properties in PageEvent class that inherits PdfPageEventHelper class.\npublic class ITextEvents : PdfPageEventHelper { #region Fields private string \\_header; #endregion #region Properties public string Header { get { return \\_header; } set { \\_header = value; } } #endregion public override void OnEndPage(iTextSharp.text.pdf.PdfWriter writer, iTextSharp.text.Document document) { base.OnEndPage(writer, document); iTextSharp.text.Font baseFontNormal = new iTextSharp.text.Font(iTextSharp.text.Font.FontFamily.HELVETICA, 12f, iTextSharp.text.Font.NORMAL, iTextSharp.text.BaseColor.BLACK); Phrase p1Header = new Phrase(Header, baseFontNormal); //Other Code here that adds header. Refer previous article } } Now add below code to your code from where you’re generating PDF:\nPdfWriter pdfWriter = PdfWriter.GetInstance(pdfDoc, msReport); Common.ITextEvents objTextEvents = new Common.ITextEvents(); objTextEvents.Header = \"Test Header\"; pdfWriter.PageEvent = objTextEvents; And the PDF would look like below:\nI hope it helps!\n",
+  "wordCount" : "152",
+  "inLanguage": "en",
+  "datePublished": "2015-08-18T00:18:00+05:30",
+  "dateModified": "2015-08-18T00:18:00+05:30",
+  "author":{
+    "@type": "Person",
+    "name": "Nilesh Thakkar"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "http://localhost:1313/2015/08/itextsharp-add-dynamic-header.html"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Nilesh Thakkar",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "http://localhost:1313/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+<body id="top">
+    <header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="Nilesh Thakkar (Alt + H)">Nilesh Thakkar</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/search/" title="Search (Alt &#43; /)" accesskey=/>
+                    <span>Search</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/posts/" title="Posts">
+                    <span>Posts</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/about/" title="About Me">
+                    <span>About Me</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/index.xml" title="RSS">
+                    <span>RSS</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="http://localhost:1313/">Home</a>&nbsp;»&nbsp;<a href="http://localhost:1313/posts/">Posts</a></div>
+    <h1 class="post-title entry-hint-parent">
+      iTextSharp: Add dynamic header
+    </h1>
+    <div class="post-meta"><span title='2015-08-18 00:18:00 +0530 +0530'>August 18, 2015</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>Nilesh Thakkar</span>
+
+</div>
+  </header> 
+  <div class="post-content"><p><a href="https://www.blogger.com/blogger.g?blogID=645092693690783735"></a><strong>Note:</strong> If you have not gone through my previous post <a href="http://nilthakkar.blogspot.in/2013/11/itextsharpadd-headerfooter-to-pdf.html"><strong>iTextSharp–Add header/footer to PDF</strong></a> , please go through it.</p>
+<p>Most of the time we&rsquo;ll require to print dynamic value in header. i.e. Company Name etc.</p>
+<p>You can create properties in PageEvent class that inherits PdfPageEventHelper class.</p>
+<pre tabindex="0"><code>public class ITextEvents : PdfPageEventHelper
+{
+
+   #region Fields
+        private string \_header;
+        #endregion
+
+        #region Properties
+        public string Header
+        {
+            get { return \_header; }
+            set { \_header = value; }
+        }
+        #endregion
+
+
+ public override void OnEndPage(iTextSharp.text.pdf.PdfWriter writer, iTextSharp.text.Document document)
+        {
+            base.OnEndPage(writer, document);
+
+            iTextSharp.text.Font baseFontNormal = new iTextSharp.text.Font(iTextSharp.text.Font.FontFamily.HELVETICA, 12f, iTextSharp.text.Font.NORMAL, iTextSharp.text.BaseColor.BLACK);
+
+            Phrase p1Header = new Phrase(Header, baseFontNormal);
+
+       //Other Code here that adds header. Refer previous article
+
+    }
+
+}
+</code></pre><p>Now add below code to your code from where you&rsquo;re generating PDF:</p>
+<pre tabindex="0"><code>PdfWriter pdfWriter = PdfWriter.GetInstance(pdfDoc, msReport);
+                                        
+Common.ITextEvents objTextEvents = new Common.ITextEvents();
+
+objTextEvents.Header = &#34;Test Header&#34;;
+
+pdfWriter.PageEvent = objTextEvents;
+</code></pre><p>And the PDF would look like below:</p>
+<p><img alt="iTextSharp Dynamic Header" loading="lazy" src="data:image/png;base64,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" title="iTextSharp Dynamic Header"></p>
+<p>I hope it helps!</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://localhost:1313/tags/asp.net/">Asp.net</a></li>
+      <li><a href="http://localhost:1313/tags/itextsharp/">Itextsharp</a></li>
+    </ul>
+<nav class="paginav">
+  <a class="prev" href="http://localhost:1313/2016/09/aspnet-web-api-help-page-customization.html">
+    <span class="title">« Prev</span>
+    <br>
+    <span>Asp.net Web API Help Page Customization</span>
+  </a>
+  <a class="next" href="http://localhost:1313/2014/01/jquery-ui-autocomplete-textbox-from.html">
+    <span class="title">Next »</span>
+    <br>
+    <span>JQuery UI AutoComplete TextBox from Database using PageMethod in ASP.Net</span>
+  </a>
+</nav>
+
+
+<ul class="share-buttons">
+    <li>
+        <a target="_blank" rel="noopener noreferrer" aria-label="share iTextSharp: Add dynamic header on x"
+            href="https://x.com/intent/tweet/?text=iTextSharp%3a%20Add%20dynamic%20header&amp;url=http%3a%2f%2flocalhost%3a1313%2f2015%2f08%2fitextsharp-add-dynamic-header.html&amp;hashtags=Asp.net%2cItextsharp">
+            <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+                <path
+                    d="M512 62.554 L 512 449.446 C 512 483.97 483.97 512 449.446 512 L 62.554 512 C 28.03 512 0 483.97 0 449.446 L 0 62.554 C 0 28.03 28.029 0 62.554 0 L 449.446 0 C 483.971 0 512 28.03 512 62.554 Z M 269.951 190.75 L 182.567 75.216 L 56 75.216 L 207.216 272.95 L 63.9 436.783 L 125.266 436.783 L 235.9 310.383 L 332.567 436.783 L 456 436.783 L 298.367 228.367 L 432.367 75.216 L 371.033 75.216 Z M 127.633 110 L 164.101 110 L 383.481 400.065 L 349.5 400.065 Z" />
+            </svg>
+        </a>
+    </li>
+    <li>
+        <a target="_blank" rel="noopener noreferrer" aria-label="share iTextSharp: Add dynamic header on linkedin"
+            href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http%3a%2f%2flocalhost%3a1313%2f2015%2f08%2fitextsharp-add-dynamic-header.html&amp;title=iTextSharp%3a%20Add%20dynamic%20header&amp;summary=iTextSharp%3a%20Add%20dynamic%20header&amp;source=http%3a%2f%2flocalhost%3a1313%2f2015%2f08%2fitextsharp-add-dynamic-header.html">
+            <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+                <path
+                    d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-288.985,423.278l0,-225.717l-75.04,0l0,225.717l75.04,0Zm270.539,0l0,-129.439c0,-69.333 -37.018,-101.586 -86.381,-101.586c-39.804,0 -57.634,21.891 -67.617,37.266l0,-31.958l-75.021,0c0.995,21.181 0,225.717 0,225.717l75.02,0l0,-126.056c0,-6.748 0.486,-13.492 2.474,-18.315c5.414,-13.475 17.767,-27.434 38.494,-27.434c27.135,0 38.007,20.707 38.007,51.037l0,120.768l75.024,0Zm-307.552,-334.556c-25.674,0 -42.448,16.879 -42.448,39.002c0,21.658 16.264,39.002 41.455,39.002l0.484,0c26.165,0 42.452,-17.344 42.452,-39.002c-0.485,-22.092 -16.241,-38.954 -41.943,-39.002Z" />
+            </svg>
+        </a>
+    </li>
+    <li>
+        <a target="_blank" rel="noopener noreferrer" aria-label="share iTextSharp: Add dynamic header on reddit"
+            href="https://reddit.com/submit?url=http%3a%2f%2flocalhost%3a1313%2f2015%2f08%2fitextsharp-add-dynamic-header.html&title=iTextSharp%3a%20Add%20dynamic%20header">
+            <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+                <path
+                    d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-3.446,265.638c0,-22.964 -18.616,-41.58 -41.58,-41.58c-11.211,0 -21.361,4.457 -28.841,11.666c-28.424,-20.508 -67.586,-33.757 -111.204,-35.278l18.941,-89.121l61.884,13.157c0.756,15.734 13.642,28.29 29.56,28.29c16.407,0 29.706,-13.299 29.706,-29.701c0,-16.403 -13.299,-29.702 -29.706,-29.702c-11.666,0 -21.657,6.792 -26.515,16.578l-69.105,-14.69c-1.922,-0.418 -3.939,-0.042 -5.585,1.036c-1.658,1.073 -2.811,2.761 -3.224,4.686l-21.152,99.438c-44.258,1.228 -84.046,14.494 -112.837,35.232c-7.468,-7.164 -17.589,-11.591 -28.757,-11.591c-22.965,0 -41.585,18.616 -41.585,41.58c0,16.896 10.095,31.41 24.568,37.918c-0.639,4.135 -0.99,8.328 -0.99,12.576c0,63.977 74.469,115.836 166.33,115.836c91.861,0 166.334,-51.859 166.334,-115.836c0,-4.218 -0.347,-8.387 -0.977,-12.493c14.564,-6.47 24.735,-21.034 24.735,-38.001Zm-119.474,108.193c-20.27,20.241 -59.115,21.816 -70.534,21.816c-11.428,0 -50.277,-1.575 -70.522,-21.82c-3.007,-3.008 -3.007,-7.882 0,-10.889c3.003,-2.999 7.882,-3.003 10.885,0c12.777,12.781 40.11,17.317 59.637,17.317c19.522,0 46.86,-4.536 59.657,-17.321c3.016,-2.999 7.886,-2.995 10.885,0.008c3.008,3.011 3.003,7.882 -0.008,10.889Zm-5.23,-48.781c-16.373,0 -29.701,-13.324 -29.701,-29.698c0,-16.381 13.328,-29.714 29.701,-29.714c16.378,0 29.706,13.333 29.706,29.714c0,16.374 -13.328,29.698 -29.706,29.698Zm-160.386,-29.702c0,-16.381 13.328,-29.71 29.714,-29.71c16.369,0 29.689,13.329 29.689,29.71c0,16.373 -13.32,29.693 -29.689,29.693c-16.386,0 -29.714,-13.32 -29.714,-29.693Z" />
+            </svg>
+        </a>
+    </li>
+    <li>
+        <a target="_blank" rel="noopener noreferrer" aria-label="share iTextSharp: Add dynamic header on facebook"
+            href="https://facebook.com/sharer/sharer.php?u=http%3a%2f%2flocalhost%3a1313%2f2015%2f08%2fitextsharp-add-dynamic-header.html">
+            <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+                <path
+                    d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-106.468,0l0,-192.915l66.6,0l12.672,-82.621l-79.272,0l0,-53.617c0,-22.603 11.073,-44.636 46.58,-44.636l36.042,0l0,-70.34c0,0 -32.71,-5.582 -63.982,-5.582c-65.288,0 -107.96,39.569 -107.96,111.204l0,62.971l-72.573,0l0,82.621l72.573,0l0,192.915l-191.104,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Z" />
+            </svg>
+        </a>
+    </li>
+    <li>
+        <a target="_blank" rel="noopener noreferrer" aria-label="share iTextSharp: Add dynamic header on whatsapp"
+            href="https://api.whatsapp.com/send?text=iTextSharp%3a%20Add%20dynamic%20header%20-%20http%3a%2f%2flocalhost%3a1313%2f2015%2f08%2fitextsharp-add-dynamic-header.html">
+            <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+                <path
+                    d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-58.673,127.703c-33.842,-33.881 -78.847,-52.548 -126.798,-52.568c-98.799,0 -179.21,80.405 -179.249,179.234c-0.013,31.593 8.241,62.428 23.927,89.612l-25.429,92.884l95.021,-24.925c26.181,14.28 55.659,21.807 85.658,21.816l0.074,0c98.789,0 179.206,-80.413 179.247,-179.243c0.018,-47.895 -18.61,-92.93 -52.451,-126.81Zm-126.797,275.782l-0.06,0c-26.734,-0.01 -52.954,-7.193 -75.828,-20.767l-5.441,-3.229l-56.386,14.792l15.05,-54.977l-3.542,-5.637c-14.913,-23.72 -22.791,-51.136 -22.779,-79.287c0.033,-82.142 66.867,-148.971 149.046,-148.971c39.793,0.014 77.199,15.531 105.329,43.692c28.128,28.16 43.609,65.592 43.594,105.4c-0.034,82.149 -66.866,148.983 -148.983,148.984Zm81.721,-111.581c-4.479,-2.242 -26.499,-13.075 -30.604,-14.571c-4.105,-1.495 -7.091,-2.241 -10.077,2.241c-2.986,4.483 -11.569,14.572 -14.182,17.562c-2.612,2.988 -5.225,3.364 -9.703,1.12c-4.479,-2.241 -18.91,-6.97 -36.017,-22.23c-13.314,-11.876 -22.304,-26.542 -24.916,-31.026c-2.612,-4.484 -0.279,-6.908 1.963,-9.14c2.016,-2.007 4.48,-5.232 6.719,-7.847c2.24,-2.615 2.986,-4.484 4.479,-7.472c1.493,-2.99 0.747,-5.604 -0.374,-7.846c-1.119,-2.241 -10.077,-24.288 -13.809,-33.256c-3.635,-8.733 -7.327,-7.55 -10.077,-7.688c-2.609,-0.13 -5.598,-0.158 -8.583,-0.158c-2.986,0 -7.839,1.121 -11.944,5.604c-4.105,4.484 -15.675,15.32 -15.675,37.364c0,22.046 16.048,43.342 18.287,46.332c2.24,2.99 31.582,48.227 76.511,67.627c10.685,4.615 19.028,7.371 25.533,9.434c10.728,3.41 20.492,2.929 28.209,1.775c8.605,-1.285 26.499,-10.833 30.231,-21.295c3.732,-10.464 3.732,-19.431 2.612,-21.298c-1.119,-1.869 -4.105,-2.99 -8.583,-5.232Z" />
+            </svg>
+        </a>
+    </li>
+    <li>
+        <a target="_blank" rel="noopener noreferrer" aria-label="share iTextSharp: Add dynamic header on telegram"
+            href="https://telegram.me/share/url?text=iTextSharp%3a%20Add%20dynamic%20header&amp;url=http%3a%2f%2flocalhost%3a1313%2f2015%2f08%2fitextsharp-add-dynamic-header.html">
+            <svg version="1.1" xml:space="preserve" viewBox="2 2 28 28" height="30px" width="30px" fill="currentColor">
+                <path
+                    d="M26.49,29.86H5.5a3.37,3.37,0,0,1-2.47-1,3.35,3.35,0,0,1-1-2.47V5.48A3.36,3.36,0,0,1,3,3,3.37,3.37,0,0,1,5.5,2h21A3.38,3.38,0,0,1,29,3a3.36,3.36,0,0,1,1,2.46V26.37a3.35,3.35,0,0,1-1,2.47A3.38,3.38,0,0,1,26.49,29.86Zm-5.38-6.71a.79.79,0,0,0,.85-.66L24.73,9.24a.55.55,0,0,0-.18-.46.62.62,0,0,0-.41-.17q-.08,0-16.53,6.11a.59.59,0,0,0-.41.59.57.57,0,0,0,.43.52l4,1.24,1.61,4.83a.62.62,0,0,0,.63.43.56.56,0,0,0,.4-.17L16.54,20l4.09,3A.9.9,0,0,0,21.11,23.15ZM13.8,20.71l-1.21-4q8.72-5.55,8.78-5.55c.15,0,.23,0,.23.16a.18.18,0,0,1,0,.06s-2.51,2.3-7.52,6.8Z" />
+            </svg>
+        </a>
+    </li>
+    <li>
+        <a target="_blank" rel="noopener noreferrer" aria-label="share iTextSharp: Add dynamic header on ycombinator"
+            href="https://news.ycombinator.com/submitlink?t=iTextSharp%3a%20Add%20dynamic%20header&u=http%3a%2f%2flocalhost%3a1313%2f2015%2f08%2fitextsharp-add-dynamic-header.html">
+            <svg version="1.1" xml:space="preserve" width="30px" height="30px" viewBox="0 0 512 512" fill="currentColor"
+                xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape">
+                <path
+                    d="M449.446 0C483.971 0 512 28.03 512 62.554L512 449.446C512 483.97 483.97 512 449.446 512L62.554 512C28.03 512 0 483.97 0 449.446L0 62.554C0 28.03 28.029 0 62.554 0L449.446 0ZM183.8767 87.9921H121.8427L230.6673 292.4508V424.0079H281.3328V292.4508L390.1575 87.9921H328.1233L256 238.2489z" />
+            </svg>
+        </a>
+    </li>
+</ul>
+
+  </footer><script src="https://giscus.app/client.js"
+        data-repo="nilact/nileshthakkar.com"
+        data-repo-id="R_kgDOQvgdbA"
+        data-category="Blog Comments"
+        data-category-id="DIC_kwDOQvgdbM4C0RyL"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="bottom"
+        data-theme="preferred_color_scheme"
+        data-lang="en"
+        data-loading="lazy"
+        crossorigin="anonymous"
+        async>
+</script>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="http://localhost:1313/">Nilesh Thakkar</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

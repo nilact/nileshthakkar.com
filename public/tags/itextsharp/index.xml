@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Itextsharp on Nilesh Thakkar</title>
+    <link>http://localhost:1313/tags/itextsharp/</link>
+    <description>Recent content in Itextsharp on Nilesh Thakkar</description>
+    <generator>Hugo -- 0.153.3</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 18 Aug 2015 00:18:00 +0530</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/itextsharp/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>iTextSharp: Add dynamic header</title>
+      <link>http://localhost:1313/2015/08/itextsharp-add-dynamic-header.html</link>
+      <pubDate>Tue, 18 Aug 2015 00:18:00 +0530</pubDate>
+      <guid>http://localhost:1313/2015/08/itextsharp-add-dynamic-header.html</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://www.blogger.com/blogger.g?blogID=645092693690783735&#34;&gt;&lt;/a&gt;&lt;strong&gt;Note:&lt;/strong&gt; If you have not gone through my previous post &lt;a href=&#34;http://nilthakkar.blogspot.in/2013/11/itextsharpadd-headerfooter-to-pdf.html&#34;&gt;&lt;strong&gt;iTextSharp–Add header/footer to PDF&lt;/strong&gt;&lt;/a&gt; , please go through it.&lt;/p&gt;
+&lt;p&gt;Most of the time we&amp;rsquo;ll require to print dynamic value in header. i.e. Company Name etc.&lt;/p&gt;
+&lt;p&gt;You can create properties in PageEvent class that inherits PdfPageEventHelper class.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;public class ITextEvents : PdfPageEventHelper
+{
+
+   #region Fields
+        private string \_header;
+        #endregion
+
+        #region Properties
+        public string Header
+        {
+            get { return \_header; }
+            set { \_header = value; }
+        }
+        #endregion
+
+
+ public override void OnEndPage(iTextSharp.text.pdf.PdfWriter writer, iTextSharp.text.Document document)
+        {
+            base.OnEndPage(writer, document);
+
+            iTextSharp.text.Font baseFontNormal = new iTextSharp.text.Font(iTextSharp.text.Font.FontFamily.HELVETICA, 12f, iTextSharp.text.Font.NORMAL, iTextSharp.text.BaseColor.BLACK);
+
+            Phrase p1Header = new Phrase(Header, baseFontNormal);
+
+       //Other Code here that adds header. Refer previous article
+
+    }
+
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Now add below code to your code from where you&amp;rsquo;re generating PDF:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>iTextSharp–Add watermark to PDF</title>
+      <link>http://localhost:1313/2013/12/itextsharpadd-watermark-to-pdf.html</link>
+      <pubDate>Tue, 31 Dec 2013 21:56:00 +0530</pubDate>
+      <guid>http://localhost:1313/2013/12/itextsharpadd-watermark-to-pdf.html</guid>
+      <description>&lt;p&gt;In last post &lt;a href=&#34;http://nilthakkar.blogspot.com/2013/11/itextsharpadd-headerfooter-to-pdf.html&#34;&gt;iTextSharp–Add header/footer to PDF&lt;/a&gt; we saw how to create pdf with header/footer. To add watermark to pdf, you need to create a class that implement &lt;strong&gt;IPdfPageEvent&lt;/strong&gt; as shown in below code:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt; public class PdfWriterEvents : IPdfPageEvent
+    {
+        string watermarkText = string.Empty;
+
+        public PdfWriterEvents(string watermark)
+        {
+            watermarkText = watermark;
+        }
+        public void OnStartPage(PdfWriter writer, Document document)
+        {
+            float fontSize = 80;
+            float xPosition = iTextSharp.text.PageSize.A4.Width / 2;
+            float yPosition = (iTextSharp.text.PageSize.A4.Height - 140f) / 2;
+            float angle = 45;
+            try
+            {
+                PdfContentByte under = writer.DirectContentUnder;
+                BaseFont baseFont = BaseFont.CreateFont(BaseFont.HELVETICA, BaseFont.WINANSI, BaseFont.EMBEDDED);
+                under.BeginText();
+                under.SetColorFill(BaseColor.LIGHT\_GRAY);
+                under.SetFontAndSize(baseFont, fontSize);
+                under.ShowTextAligned(PdfContentByte.ALIGN\_CENTER, watermarkText, xPosition, yPosition, angle);
+                under.EndText();
+            }
+            catch (Exception ex)
+            {
+                Console.Error.WriteLine(ex.Message);
+            }
+        }
+        public void OnEndPage(PdfWriter writer, Document document) { }
+        public void OnParagraph(PdfWriter writer, Document document, float paragraphPosition) { }
+        public void OnParagraphEnd(PdfWriter writer, Document document, float paragraphPosition) { }
+        public void OnChapter(PdfWriter writer, Document document, float paragraphPosition, Paragraph title) { }
+        public void OnChapterEnd(PdfWriter writer, Document document, float paragraphPosition) { }
+        public void OnSection(PdfWriter writer, Document document, float paragraphPosition, int depth, Paragraph title) { }
+        public void OnSectionEnd(PdfWriter writer, Document document, float paragraphPosition) { }
+        public void OnGenericTag(PdfWriter writer, Document document, Rectangle rect, String text) { }
+        public void OnOpenDocument(PdfWriter writer, Document document) { }
+        public void OnCloseDocument(PdfWriter writer, Document document) { }
+    }
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Now let’s see how to add watermark using above class:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>iTextSharp–Add header/footer to PDF </title>
+      <link>http://localhost:1313/2013/11/itextsharpadd-headerfooter-to-pdf.html</link>
+      <pubDate>Sat, 30 Nov 2013 21:55:00 +0530</pubDate>
+      <guid>http://localhost:1313/2013/11/itextsharpadd-headerfooter-to-pdf.html</guid>
+      <description>&lt;p&gt;It’s a common requirement to have header/footer on PDF and it could be achieved using PageEvents in iTextSharp. It depends on the requirement, but in general header may contain:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Header Title&lt;/li&gt;
+&lt;li&gt;Header Subtitle&lt;/li&gt;
+&lt;li&gt;Logo&lt;/li&gt;
+&lt;li&gt;Page Number/Datetime&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;And footer may contain:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Page Number&lt;/li&gt;
+&lt;li&gt;Copyright information&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Check out below function that creates sample PDF having five pages with header and footer:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;private void CreatePDF()
+{
+    string fileName = string.Empty;
+
+    DateTime fileCreationDatetime = DateTime.Now;
+
+    fileName = string.Format(&amp;#34;{0}.pdf&amp;#34;, fileCreationDatetime.ToString(@&amp;#34;yyyyMMdd&amp;#34;) + &amp;#34;\_&amp;#34; + fileCreationDatetime.ToString(@&amp;#34;HHmmss&amp;#34;));
+
+    string pdfPath = Server.MapPath(@&amp;#34;~\\PDF\\&amp;#34;) +   fileName;
+
+    using (FileStream msReport = new FileStream(pdfPath, FileMode.Create))
+    {
+        //step 1
+        using (Document pdfDoc = new Document(PageSize.A4, 10f, 10f, 140f, 10f))
+        {
+            try
+            {
+                // step 2
+                PdfWriter pdfWriter = PdfWriter.GetInstance(pdfDoc, msReport);
+                pdfWriter.PageEvent = new Common.ITextEvents();
+
+                //open the stream 
+                pdfDoc.Open();
+
+                for (int i = 0; i &amp;lt; 5; i++)
+                {
+                    Paragraph para = new Paragraph(&amp;#34;Hello world. Checking Header Footer&amp;#34;, new Font(Font.FontFamily.HELVETICA, 22));
+
+                    para.Alignment = Element.ALIGN\_CENTER;
+
+                    pdfDoc.Add(para);
+
+                    pdfDoc.NewPage();
+                }
+
+                pdfDoc.Close();
+
+            }
+            catch (Exception ex)
+            {
+                //handle exception
+            }
+
+            finally
+            {
+
+
+            }
+
+        }
+
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Below line assigns object of ItextEvent class that extends &lt;strong&gt;PdfPageEventHelper&lt;/strong&gt;, which contains various methods as shown below that you can override to do various thing like add header/footer, watermark etc. In next post we’ll add watermark using similar class that extends &lt;strong&gt;PdfPageEventHelper.&lt;/strong&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>iTextSharp–Print PDF</title>
+      <link>http://localhost:1313/2013/09/itextsharpprint-pdf.html</link>
+      <pubDate>Mon, 30 Sep 2013 22:36:00 +0530</pubDate>
+      <guid>http://localhost:1313/2013/09/itextsharpprint-pdf.html</guid>
+      <description>&lt;p&gt;To print html page, we use&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-javascript&#34; data-lang=&#34;javascript&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;window.&lt;span style=&#34;color:#a6e22e&#34;&gt;print&lt;/span&gt;();
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;but for PDF same can not be used as it won’t work. However iTextSharp provides a way to print PDF on client side with &lt;strong&gt;AddJavaScript&lt;/strong&gt; method of PdfWriter.&lt;/p&gt;
+&lt;p&gt;Check out below code:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-csharp&#34; data-lang=&#34;csharp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;private&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt; CreatePDF()
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;string&lt;/span&gt; fileName = &lt;span style=&#34;color:#66d9ef&#34;&gt;string&lt;/span&gt;.Empty;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        DateTime fileCreationDatetime = DateTime.Now;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        fileName = &lt;span style=&#34;color:#66d9ef&#34;&gt;string&lt;/span&gt;.Format(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;{0}.pdf&amp;#34;&lt;/span&gt;, fileCreationDatetime.ToString(&lt;span style=&#34;color:#e6db74&#34;&gt;@&amp;#34;yyyyMMdd&amp;#34;&lt;/span&gt;) + &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;_&amp;#34;&lt;/span&gt; + fileCreationDatetime.ToString(&lt;span style=&#34;color:#e6db74&#34;&gt;@&amp;#34;HHmmss&amp;#34;&lt;/span&gt;));
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;string&lt;/span&gt; pdfPath = &lt;span style=&#34;color:#e6db74&#34;&gt;@&amp;#34;E:\PDFs\&amp;#34;&lt;/span&gt; + fileName;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;using&lt;/span&gt; (FileStream msReport = &lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; FileStream(pdfPath, FileMode.Create))
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#75715e&#34;&gt;//step 1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#66d9ef&#34;&gt;using&lt;/span&gt; (Document pdfDoc = &lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; Document(PageSize.A4, &lt;span style=&#34;color:#ae81ff&#34;&gt;10f&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;10f&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;100f&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;10f&lt;/span&gt;))
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                &lt;span style=&#34;color:#66d9ef&#34;&gt;try&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                    &lt;span style=&#34;color:#75715e&#34;&gt;// step 2&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                    PdfWriter pdfWriter = PdfWriter.GetInstance(pdfDoc, msReport);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                    &lt;span style=&#34;color:#75715e&#34;&gt;//open the stream &lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                    pdfDoc.Open();
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                    Phrase phrase1 = &lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; Phrase(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Hello world. Checking Print Functionality&amp;#34;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                    pdfDoc.Add(phrase1);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                    pdfWriter.AddJavaScript(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;this.print();&amp;#34;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                    pdfDoc.Close();
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                &lt;span style=&#34;color:#66d9ef&#34;&gt;catch&lt;/span&gt; (Exception ex)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                    &lt;span style=&#34;color:#75715e&#34;&gt;//handle exception&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                &lt;span style=&#34;color:#66d9ef&#34;&gt;finally&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;It won’t print the PDF directly but will open print dialog as soon as you open the PDF. One can choose one of the listed printer and print it. There won’t be any print preview. On web page to simulate the print functionality, one can assign pdf path to Iframe which will be hidden on page.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>iTextSharp - Add Image from base64 string</title>
+      <link>http://localhost:1313/2013/03/itextsharp-add-image-from-base64-string.html</link>
+      <pubDate>Sun, 17 Mar 2013 22:53:00 +0530</pubDate>
+      <guid>http://localhost:1313/2013/03/itextsharp-add-image-from-base64-string.html</guid>
+      <description>&lt;p&gt;Itexhsharp is one of the popular third party component to create PDF with .Net framework.&lt;/p&gt;
+&lt;p&gt;If you&amp;rsquo;re using Itextsharp for the very first time, I would suggest you to go through Mike&amp;rsquo;s &lt;a href=&#34;http://www.mikesdotnetting.com/Article/80/Create-PDFs-in-ASP.NET-getting-started-with-iTextSharp&#34;&gt;series on Itextsharp&lt;/a&gt; that helps you to get started and &lt;a href=&#34;http://www.mikesdotnetting.com/Article/87/iTextSharp-Working-with-images&#34;&gt;here&lt;/a&gt; is the article from the series that shows different ways to add images to  Itextsharp.&lt;/p&gt;
+&lt;p&gt;To add image from base64 string, you first need to convert base64 string in to bytes array and then you can call GetInstance method of Itextsharp Image which accepts bytes array.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

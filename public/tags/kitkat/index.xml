@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Kitkat on Your Blog Title</title>
+    <link>http://localhost:1313/tags/kitkat/</link>
+    <description>Recent content in Kitkat on Your Blog Title</description>
+    <generator>Hugo -- 0.153.3</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 28 Feb 2014 23:09:00 +0530</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/kitkat/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Android kitkat missing things</title>
+      <link>http://localhost:1313/posts/android-kitkat-missing-things/</link>
+      <pubDate>Fri, 28 Feb 2014 23:09:00 +0530</pubDate>
+      <guid>http://localhost:1313/posts/android-kitkat-missing-things/</guid>
+      <description>&lt;p&gt;Android kitkat (4.4.2) has tons of features but it lacks the basic feature of sharing contact via SMS. For such a basic functionality, nobody would want to install third party app.&lt;/p&gt;
+&lt;p&gt;It also doesn&amp;rsquo;t show contact wise call history, for that too you&amp;rsquo;ve to rely on third party app.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

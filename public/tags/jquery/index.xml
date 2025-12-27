@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>JQuery on Nilesh Thakkar</title>
+    <link>http://localhost:1313/tags/jquery/</link>
+    <description>Recent content in JQuery on Nilesh Thakkar</description>
+    <generator>Hugo -- 0.153.3</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 16 Jan 2014 16:25:00 +0530</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/jquery/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>JQuery UI AutoComplete TextBox from Database using PageMethod in ASP.Net</title>
+      <link>http://localhost:1313/2014/01/jquery-ui-autocomplete-textbox-from.html</link>
+      <pubDate>Thu, 16 Jan 2014 16:25:00 +0530</pubDate>
+      <guid>http://localhost:1313/2014/01/jquery-ui-autocomplete-textbox-from.html</guid>
+      <description>&lt;p&gt;In this post we’ll see how to user Jquery UI Autocomplete with asp.net pagemethod.&lt;/p&gt;
+&lt;p&gt;For database, we’ll be using &lt;a href=&#34;http://northwinddatabase.codeplex.com/releases/view/71634&#34;&gt;Northwind&lt;/a&gt; database.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;PageMethod:&lt;/strong&gt;&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;\[ScriptMethod(ResponseFormat= ResponseFormat.Json)\]
+    \[WebMethod\]
+    public static List&amp;lt;AutoCompleteHelper&amp;gt; GetEmployee(string searchText)
+    {
+        using (SqlConnection conn = new SqlConnection())
+        {
+            conn.ConnectionString = ConfigurationManager
+                    .ConnectionStrings\[&amp;#34;NorthwindConnectionString&amp;#34;\].ConnectionString;
+            using (SqlCommand cmd = new SqlCommand())
+            {
+                cmd.CommandText = &amp;#34;select CustomerID,ContactName from Customers where &amp;#34; +
+                &amp;#34;ContactName like @SearchText + &amp;#39;%&amp;#39;&amp;#34;;
+                cmd.Parameters.AddWithValue(&amp;#34;@SearchText&amp;#34;, searchText);
+                cmd.Connection = conn;
+                List&amp;lt;AutoCompleteHelper&amp;gt; listAutoCompleteHelper = new List&amp;lt;AutoCompleteHelper&amp;gt;();
+                conn.Open();
+                using (SqlDataReader sdr = cmd.ExecuteReader())
+                {
+                    while (sdr.Read())
+                    {
+                        AutoCompleteHelper objCompleteHelper = new AutoCompleteHelper();
+                        objCompleteHelper.displayText = Convert.ToString(sdr\[&amp;#34;ContactName&amp;#34;\]);
+                        objCompleteHelper.displayValue = Convert.ToString(sdr\[&amp;#34;CustomerID&amp;#34;\]);
+                        listAutoCompleteHelper.Add(objCompleteHelper);
+                        
+                    }
+                }
+                conn.Close();
+                Thread.Sleep(3000);
+                return listAutoCompleteHelper;
+            }
+        }
+    }
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;In above code, we’re fetching data from customer table from northwind database based on text entered by user. You may want to have this code in separate (data access) layer and must use stored procedure rather than inline query, I’ve included this code just for demonstration purpose.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Jquery DataTables : Add column filter and remove global filter</title>
+      <link>http://localhost:1313/2014/01/jquery-datatables-add-column-filter-and.html</link>
+      <pubDate>Wed, 15 Jan 2014 15:50:00 +0530</pubDate>
+      <guid>http://localhost:1313/2014/01/jquery-datatables-add-column-filter-and.html</guid>
+      <description>&lt;p&gt;Jquery &lt;a href=&#34;http://datatables.net/&#34;&gt;DataTables&lt;/a&gt; plugin allows you to search through all the columns and it works pretty well. Now if you wan to add column wise filter, you need to use &lt;a href=&#34;https://code.google.com/p/jquery-datatables-column-filter/&#34;&gt;JQuery DataTables Column Filter plugin&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;To extend Jquery DataTables with Column Filter plugin, you need to have code like below:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;     &amp;lt;asp:Repeater ID=&amp;#34;repUserTempAssignment&amp;#34; runat=&amp;#34;server&amp;#34; DataSourceID=&amp;#34;SqlDataSource1&amp;#34;
+            EnableViewState=&amp;#34;false&amp;#34;&amp;gt;
+            &amp;lt;HeaderTemplate&amp;gt;
+                &amp;lt;table class=&amp;#34;table-data&amp;#34; id=&amp;#34;tblEmployee&amp;#34; style=&amp;#34;width: 100%px;&amp;#34;&amp;gt;
+                    &amp;lt;thead&amp;gt;
+                        &amp;lt;tr&amp;gt;
+                            &amp;lt;th&amp;gt;
+                                First Name
+                            &amp;lt;/th&amp;gt;
+                            &amp;lt;th&amp;gt;
+                                Last Name
+                            &amp;lt;/th&amp;gt;
+                            &amp;lt;th&amp;gt;
+                                City
+                            &amp;lt;/th&amp;gt;
+                            &amp;lt;th&amp;gt;
+                                Country
+                            &amp;lt;/th&amp;gt;
+                        &amp;lt;/tr&amp;gt;
+                        &amp;lt;tr&amp;gt;
+                            &amp;lt;th&amp;gt;
+                                First Name
+                            &amp;lt;/th&amp;gt;
+                            &amp;lt;th&amp;gt;
+                                Last Name
+                            &amp;lt;/th&amp;gt;
+                            &amp;lt;th&amp;gt;
+                                City
+                            &amp;lt;/th&amp;gt;
+                            &amp;lt;th&amp;gt;
+                                Country
+                            &amp;lt;/th&amp;gt;
+                        &amp;lt;/tr&amp;gt;
+                    &amp;lt;/thead&amp;gt;
+                    &amp;lt;tbody&amp;gt;
+            &amp;lt;/HeaderTemplate&amp;gt;
+            &amp;lt;ItemTemplate&amp;gt;
+                &amp;lt;tr&amp;gt;
+                    &amp;lt;td&amp;gt;
+                        &amp;lt;%# Eval(&amp;#34;FirstName&amp;#34;) %&amp;gt;
+                    &amp;lt;/td&amp;gt;
+                    &amp;lt;td&amp;gt;
+                        &amp;lt;%# Eval(&amp;#34;LastName&amp;#34;) %&amp;gt;
+                    &amp;lt;/td&amp;gt;
+                    &amp;lt;td&amp;gt;
+                        &amp;lt;%# Eval(&amp;#34;City&amp;#34;) %&amp;gt;
+                    &amp;lt;/td&amp;gt;
+                    &amp;lt;td&amp;gt;
+                        &amp;lt;%# Eval(&amp;#34;Country&amp;#34;) %&amp;gt;
+                    &amp;lt;/td&amp;gt;
+                &amp;lt;/tr&amp;gt;
+            &amp;lt;/ItemTemplate&amp;gt;
+            &amp;lt;FooterTemplate&amp;gt;
+                &amp;lt;/tbody&amp;gt;&amp;lt;tfoot&amp;gt;
+                &amp;lt;/tfoot&amp;gt;
+                &amp;lt;/table&amp;gt;
+            &amp;lt;/FooterTemplate&amp;gt;
+        &amp;lt;/asp:Repeater&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;I’m using asp.net repeater control to bind employee list. If you notice in above code table has two rows in header. One will work as table header and one will be replaced with textboxes at runtime which will work as column filter. For that you need below script:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Jquery Multiselect plugin retain selection on postback in Asp.net</title>
+      <link>http://localhost:1313/2013/05/jquery-multiselect-plugin-retain.html</link>
+      <pubDate>Sat, 11 May 2013 19:30:00 +0530</pubDate>
+      <guid>http://localhost:1313/2013/05/jquery-multiselect-plugin-retain.html</guid>
+      <description>&lt;p&gt;One can use &lt;a href=&#34;http://www.erichynds.com/blog/jquery-ui-multiselect-widget&#34;&gt;Jquery Mutiselect&lt;/a&gt; plugin to allow user to select multiple items from the options available in dropdown. When we click on dropdown it looks something like below:&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;image&#34; loading=&#34;lazy&#34; src=&#34;http://localhost:1313/images/73080-image_thumb.png&#34;&gt;&lt;br&gt;
+Check out the demo page of plugin &lt;a href=&#34;http://www.erichynds.com/examples/jquery-ui-multiselect-widget/demos/index.htm#basic&#34;&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;The problem with the plugin is that it won’t remember the user selection and value will be lost on postback. For that you can store the selected valued delimited by comma in hidden field and restore the value on page load.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>How to display message box in Asp.net?</title>
+      <link>http://localhost:1313/2012/01/how-to-display-message-box-in-aspnet.html</link>
+      <pubDate>Mon, 02 Jan 2012 22:34:00 +0530</pubDate>
+      <guid>http://localhost:1313/2012/01/how-to-display-message-box-in-aspnet.html</guid>
+      <description>&lt;p&gt;Every new beginner from windows form development background uses MsgBox.Show method but unfortunately it executes server side and will display the message box on server. Then they ask it on different forums seeking help, how to display message box in Asp.net then? (one of the most frequent and common question on asp.net forum)&lt;br&gt;
+There are various ways to do it.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Use JavaScript alert to display messagebox, confirm and prompt&lt;/li&gt;
+&lt;li&gt;Download &lt;a href=&#34;http://alerts.codeplex.com/&#34;&gt;alert&lt;/a&gt; control from codeplex and use it.&lt;/li&gt;
+&lt;li&gt;Use Modal Popup or Confirm Button from &lt;a href=&#34;http://www.asp.net/ajaxLibrary/AjaxControlToolkitSampleSite/Default.aspx&#34;&gt;Ajax Toolkit&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Use &lt;a href=&#34;http://jqueryui.com/demos/dialog/&#34;&gt;Jquery UI Dialog&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;You can use any Jquery based dialog box. I’ve been using &lt;a href=&#34;http://abeautifulsite.net/blog/2008/12/jquery-alert-dialogs/&#34;&gt;Jalert&lt;/a&gt; for quite a long time. It is easy to use and you can quickly customize as per the need. One of the best part of Jalert is that it allows you to perform certain activity by using Callback function. Before using Jalert, make sure you’ve referenced &lt;a href=&#34;http://jquery.com/&#34;&gt;Jquery&lt;/a&gt; in your project.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

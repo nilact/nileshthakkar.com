@@ -1,0 +1,55 @@
+baseURL = "https://nileshblog.github.io/"  # Change to your actual URL later
+languageCode = "en-us"
+title = "Nilesh Thakkar"
+theme = "PaperMod"
+
+# Enable JSON output for search
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
+[params]
+  env = "production"
+  title = "Nilesh Thakkar"
+  description = ""
+  author = "Nilesh Thakkar"
+  ShowBreadCrumbs = true
+  ShowReadingTime = true
+  ShowShareButtons = true
+  ShowPostNavLinks = true
+  comments = true
+
+  [params.homeInfoParams]
+    Title = "Hello, I'm Nilesh Thakkar 👋"
+    Content = "I'm a Senior Engineer in Toronto, Canada. I enjoy reading, writing, and food.\n\nWays to get in touch with me: [Twitter](https://x.com/nilact), [LinkedIn](https://linkedin.com/in/nilthakker), and [Stack Overflow](https://stackoverflow.com/users/309395/nilesh-thakkar)."
+
+  # Search configuration
+  [params.fuseOpts]
+    isCaseSensitive = false
+    shouldSort = true
+    location = 0
+    distance = 1000
+    threshold = 0.4
+    minMatchCharLength = 0
+    keys = ["title", "permalink", "summary", "content"]
+
+[menu]
+  [[menu.main]]
+    identifier = "search"
+    name = "Search"
+    url = "/search/"
+    weight = 5
+  [[menu.main]]
+    identifier = "posts"
+    name = "Posts"
+    url = "/posts/"
+    weight = 10
+  [[menu.main]]
+    identifier = "about"
+    name = "About Me"
+    url = "/about/"
+    weight = 20
+  [[menu.main]]
+    identifier = "rss"
+    name = "RSS"
+    url = "/index.xml"
+    weight = 30

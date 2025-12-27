@@ -1,0 +1,452 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Asp.net on Nilesh Thakkar</title>
+    <link>http://localhost:1313/tags/asp.net/</link>
+    <description>Recent content in Asp.net on Nilesh Thakkar</description>
+    <generator>Hugo -- 0.153.3</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 10 Sep 2016 22:44:00 +0530</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/asp.net/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Asp.net Web API Help Page Customization</title>
+      <link>http://localhost:1313/2016/09/aspnet-web-api-help-page-customization.html</link>
+      <pubDate>Sat, 10 Sep 2016 22:44:00 +0530</pubDate>
+      <guid>http://localhost:1313/2016/09/aspnet-web-api-help-page-customization.html</guid>
+      <description>Customize ASP.NET Web API Help Page with sorting, multi-project support, and more.</description>
+    </item>
+    <item>
+      <title>iTextSharp: Add dynamic header</title>
+      <link>http://localhost:1313/2015/08/itextsharp-add-dynamic-header.html</link>
+      <pubDate>Tue, 18 Aug 2015 00:18:00 +0530</pubDate>
+      <guid>http://localhost:1313/2015/08/itextsharp-add-dynamic-header.html</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://www.blogger.com/blogger.g?blogID=645092693690783735&#34;&gt;&lt;/a&gt;&lt;strong&gt;Note:&lt;/strong&gt; If you have not gone through my previous post &lt;a href=&#34;http://nilthakkar.blogspot.in/2013/11/itextsharpadd-headerfooter-to-pdf.html&#34;&gt;&lt;strong&gt;iTextSharp–Add header/footer to PDF&lt;/strong&gt;&lt;/a&gt; , please go through it.&lt;/p&gt;
+&lt;p&gt;Most of the time we&amp;rsquo;ll require to print dynamic value in header. i.e. Company Name etc.&lt;/p&gt;
+&lt;p&gt;You can create properties in PageEvent class that inherits PdfPageEventHelper class.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;public class ITextEvents : PdfPageEventHelper
+{
+
+   #region Fields
+        private string \_header;
+        #endregion
+
+        #region Properties
+        public string Header
+        {
+            get { return \_header; }
+            set { \_header = value; }
+        }
+        #endregion
+
+
+ public override void OnEndPage(iTextSharp.text.pdf.PdfWriter writer, iTextSharp.text.Document document)
+        {
+            base.OnEndPage(writer, document);
+
+            iTextSharp.text.Font baseFontNormal = new iTextSharp.text.Font(iTextSharp.text.Font.FontFamily.HELVETICA, 12f, iTextSharp.text.Font.NORMAL, iTextSharp.text.BaseColor.BLACK);
+
+            Phrase p1Header = new Phrase(Header, baseFontNormal);
+
+       //Other Code here that adds header. Refer previous article
+
+    }
+
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Now add below code to your code from where you&amp;rsquo;re generating PDF:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>JQuery UI AutoComplete TextBox from Database using PageMethod in ASP.Net</title>
+      <link>http://localhost:1313/2014/01/jquery-ui-autocomplete-textbox-from.html</link>
+      <pubDate>Thu, 16 Jan 2014 16:25:00 +0530</pubDate>
+      <guid>http://localhost:1313/2014/01/jquery-ui-autocomplete-textbox-from.html</guid>
+      <description>&lt;p&gt;In this post we’ll see how to user Jquery UI Autocomplete with asp.net pagemethod.&lt;/p&gt;
+&lt;p&gt;For database, we’ll be using &lt;a href=&#34;http://northwinddatabase.codeplex.com/releases/view/71634&#34;&gt;Northwind&lt;/a&gt; database.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;PageMethod:&lt;/strong&gt;&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;\[ScriptMethod(ResponseFormat= ResponseFormat.Json)\]
+    \[WebMethod\]
+    public static List&amp;lt;AutoCompleteHelper&amp;gt; GetEmployee(string searchText)
+    {
+        using (SqlConnection conn = new SqlConnection())
+        {
+            conn.ConnectionString = ConfigurationManager
+                    .ConnectionStrings\[&amp;#34;NorthwindConnectionString&amp;#34;\].ConnectionString;
+            using (SqlCommand cmd = new SqlCommand())
+            {
+                cmd.CommandText = &amp;#34;select CustomerID,ContactName from Customers where &amp;#34; +
+                &amp;#34;ContactName like @SearchText + &amp;#39;%&amp;#39;&amp;#34;;
+                cmd.Parameters.AddWithValue(&amp;#34;@SearchText&amp;#34;, searchText);
+                cmd.Connection = conn;
+                List&amp;lt;AutoCompleteHelper&amp;gt; listAutoCompleteHelper = new List&amp;lt;AutoCompleteHelper&amp;gt;();
+                conn.Open();
+                using (SqlDataReader sdr = cmd.ExecuteReader())
+                {
+                    while (sdr.Read())
+                    {
+                        AutoCompleteHelper objCompleteHelper = new AutoCompleteHelper();
+                        objCompleteHelper.displayText = Convert.ToString(sdr\[&amp;#34;ContactName&amp;#34;\]);
+                        objCompleteHelper.displayValue = Convert.ToString(sdr\[&amp;#34;CustomerID&amp;#34;\]);
+                        listAutoCompleteHelper.Add(objCompleteHelper);
+                        
+                    }
+                }
+                conn.Close();
+                Thread.Sleep(3000);
+                return listAutoCompleteHelper;
+            }
+        }
+    }
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;In above code, we’re fetching data from customer table from northwind database based on text entered by user. You may want to have this code in separate (data access) layer and must use stored procedure rather than inline query, I’ve included this code just for demonstration purpose.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>iTextSharp–Add watermark to PDF</title>
+      <link>http://localhost:1313/2013/12/itextsharpadd-watermark-to-pdf.html</link>
+      <pubDate>Tue, 31 Dec 2013 21:56:00 +0530</pubDate>
+      <guid>http://localhost:1313/2013/12/itextsharpadd-watermark-to-pdf.html</guid>
+      <description>&lt;p&gt;In last post &lt;a href=&#34;http://nilthakkar.blogspot.com/2013/11/itextsharpadd-headerfooter-to-pdf.html&#34;&gt;iTextSharp–Add header/footer to PDF&lt;/a&gt; we saw how to create pdf with header/footer. To add watermark to pdf, you need to create a class that implement &lt;strong&gt;IPdfPageEvent&lt;/strong&gt; as shown in below code:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt; public class PdfWriterEvents : IPdfPageEvent
+    {
+        string watermarkText = string.Empty;
+
+        public PdfWriterEvents(string watermark)
+        {
+            watermarkText = watermark;
+        }
+        public void OnStartPage(PdfWriter writer, Document document)
+        {
+            float fontSize = 80;
+            float xPosition = iTextSharp.text.PageSize.A4.Width / 2;
+            float yPosition = (iTextSharp.text.PageSize.A4.Height - 140f) / 2;
+            float angle = 45;
+            try
+            {
+                PdfContentByte under = writer.DirectContentUnder;
+                BaseFont baseFont = BaseFont.CreateFont(BaseFont.HELVETICA, BaseFont.WINANSI, BaseFont.EMBEDDED);
+                under.BeginText();
+                under.SetColorFill(BaseColor.LIGHT\_GRAY);
+                under.SetFontAndSize(baseFont, fontSize);
+                under.ShowTextAligned(PdfContentByte.ALIGN\_CENTER, watermarkText, xPosition, yPosition, angle);
+                under.EndText();
+            }
+            catch (Exception ex)
+            {
+                Console.Error.WriteLine(ex.Message);
+            }
+        }
+        public void OnEndPage(PdfWriter writer, Document document) { }
+        public void OnParagraph(PdfWriter writer, Document document, float paragraphPosition) { }
+        public void OnParagraphEnd(PdfWriter writer, Document document, float paragraphPosition) { }
+        public void OnChapter(PdfWriter writer, Document document, float paragraphPosition, Paragraph title) { }
+        public void OnChapterEnd(PdfWriter writer, Document document, float paragraphPosition) { }
+        public void OnSection(PdfWriter writer, Document document, float paragraphPosition, int depth, Paragraph title) { }
+        public void OnSectionEnd(PdfWriter writer, Document document, float paragraphPosition) { }
+        public void OnGenericTag(PdfWriter writer, Document document, Rectangle rect, String text) { }
+        public void OnOpenDocument(PdfWriter writer, Document document) { }
+        public void OnCloseDocument(PdfWriter writer, Document document) { }
+    }
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Now let’s see how to add watermark using above class:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>iTextSharp–Add header/footer to PDF </title>
+      <link>http://localhost:1313/2013/11/itextsharpadd-headerfooter-to-pdf.html</link>
+      <pubDate>Sat, 30 Nov 2013 21:55:00 +0530</pubDate>
+      <guid>http://localhost:1313/2013/11/itextsharpadd-headerfooter-to-pdf.html</guid>
+      <description>&lt;p&gt;It’s a common requirement to have header/footer on PDF and it could be achieved using PageEvents in iTextSharp. It depends on the requirement, but in general header may contain:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Header Title&lt;/li&gt;
+&lt;li&gt;Header Subtitle&lt;/li&gt;
+&lt;li&gt;Logo&lt;/li&gt;
+&lt;li&gt;Page Number/Datetime&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;And footer may contain:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Page Number&lt;/li&gt;
+&lt;li&gt;Copyright information&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Check out below function that creates sample PDF having five pages with header and footer:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;private void CreatePDF()
+{
+    string fileName = string.Empty;
+
+    DateTime fileCreationDatetime = DateTime.Now;
+
+    fileName = string.Format(&amp;#34;{0}.pdf&amp;#34;, fileCreationDatetime.ToString(@&amp;#34;yyyyMMdd&amp;#34;) + &amp;#34;\_&amp;#34; + fileCreationDatetime.ToString(@&amp;#34;HHmmss&amp;#34;));
+
+    string pdfPath = Server.MapPath(@&amp;#34;~\\PDF\\&amp;#34;) +   fileName;
+
+    using (FileStream msReport = new FileStream(pdfPath, FileMode.Create))
+    {
+        //step 1
+        using (Document pdfDoc = new Document(PageSize.A4, 10f, 10f, 140f, 10f))
+        {
+            try
+            {
+                // step 2
+                PdfWriter pdfWriter = PdfWriter.GetInstance(pdfDoc, msReport);
+                pdfWriter.PageEvent = new Common.ITextEvents();
+
+                //open the stream 
+                pdfDoc.Open();
+
+                for (int i = 0; i &amp;lt; 5; i++)
+                {
+                    Paragraph para = new Paragraph(&amp;#34;Hello world. Checking Header Footer&amp;#34;, new Font(Font.FontFamily.HELVETICA, 22));
+
+                    para.Alignment = Element.ALIGN\_CENTER;
+
+                    pdfDoc.Add(para);
+
+                    pdfDoc.NewPage();
+                }
+
+                pdfDoc.Close();
+
+            }
+            catch (Exception ex)
+            {
+                //handle exception
+            }
+
+            finally
+            {
+
+
+            }
+
+        }
+
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Below line assigns object of ItextEvent class that extends &lt;strong&gt;PdfPageEventHelper&lt;/strong&gt;, which contains various methods as shown below that you can override to do various thing like add header/footer, watermark etc. In next post we’ll add watermark using similar class that extends &lt;strong&gt;PdfPageEventHelper.&lt;/strong&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>iTextSharp–Print PDF</title>
+      <link>http://localhost:1313/2013/09/itextsharpprint-pdf.html</link>
+      <pubDate>Mon, 30 Sep 2013 22:36:00 +0530</pubDate>
+      <guid>http://localhost:1313/2013/09/itextsharpprint-pdf.html</guid>
+      <description>&lt;p&gt;To print html page, we use&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-javascript&#34; data-lang=&#34;javascript&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;window.&lt;span style=&#34;color:#a6e22e&#34;&gt;print&lt;/span&gt;();
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;but for PDF same can not be used as it won’t work. However iTextSharp provides a way to print PDF on client side with &lt;strong&gt;AddJavaScript&lt;/strong&gt; method of PdfWriter.&lt;/p&gt;
+&lt;p&gt;Check out below code:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-csharp&#34; data-lang=&#34;csharp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;private&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt; CreatePDF()
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;string&lt;/span&gt; fileName = &lt;span style=&#34;color:#66d9ef&#34;&gt;string&lt;/span&gt;.Empty;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        DateTime fileCreationDatetime = DateTime.Now;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        fileName = &lt;span style=&#34;color:#66d9ef&#34;&gt;string&lt;/span&gt;.Format(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;{0}.pdf&amp;#34;&lt;/span&gt;, fileCreationDatetime.ToString(&lt;span style=&#34;color:#e6db74&#34;&gt;@&amp;#34;yyyyMMdd&amp;#34;&lt;/span&gt;) + &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;_&amp;#34;&lt;/span&gt; + fileCreationDatetime.ToString(&lt;span style=&#34;color:#e6db74&#34;&gt;@&amp;#34;HHmmss&amp;#34;&lt;/span&gt;));
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;string&lt;/span&gt; pdfPath = &lt;span style=&#34;color:#e6db74&#34;&gt;@&amp;#34;E:\PDFs\&amp;#34;&lt;/span&gt; + fileName;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;using&lt;/span&gt; (FileStream msReport = &lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; FileStream(pdfPath, FileMode.Create))
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#75715e&#34;&gt;//step 1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#66d9ef&#34;&gt;using&lt;/span&gt; (Document pdfDoc = &lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; Document(PageSize.A4, &lt;span style=&#34;color:#ae81ff&#34;&gt;10f&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;10f&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;100f&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;10f&lt;/span&gt;))
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                &lt;span style=&#34;color:#66d9ef&#34;&gt;try&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                    &lt;span style=&#34;color:#75715e&#34;&gt;// step 2&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                    PdfWriter pdfWriter = PdfWriter.GetInstance(pdfDoc, msReport);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                    &lt;span style=&#34;color:#75715e&#34;&gt;//open the stream &lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                    pdfDoc.Open();
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                    Phrase phrase1 = &lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; Phrase(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Hello world. Checking Print Functionality&amp;#34;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                    pdfDoc.Add(phrase1);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                    pdfWriter.AddJavaScript(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;this.print();&amp;#34;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                    pdfDoc.Close();
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                &lt;span style=&#34;color:#66d9ef&#34;&gt;catch&lt;/span&gt; (Exception ex)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                    &lt;span style=&#34;color:#75715e&#34;&gt;//handle exception&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                &lt;span style=&#34;color:#66d9ef&#34;&gt;finally&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;It won’t print the PDF directly but will open print dialog as soon as you open the PDF. One can choose one of the listed printer and print it. There won’t be any print preview. On web page to simulate the print functionality, one can assign pdf path to Iframe which will be hidden on page.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Jquery Multiselect plugin retain selection on postback in Asp.net</title>
+      <link>http://localhost:1313/2013/05/jquery-multiselect-plugin-retain.html</link>
+      <pubDate>Sat, 11 May 2013 19:30:00 +0530</pubDate>
+      <guid>http://localhost:1313/2013/05/jquery-multiselect-plugin-retain.html</guid>
+      <description>&lt;p&gt;One can use &lt;a href=&#34;http://www.erichynds.com/blog/jquery-ui-multiselect-widget&#34;&gt;Jquery Mutiselect&lt;/a&gt; plugin to allow user to select multiple items from the options available in dropdown. When we click on dropdown it looks something like below:&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;image&#34; loading=&#34;lazy&#34; src=&#34;http://localhost:1313/images/73080-image_thumb.png&#34;&gt;&lt;br&gt;
+Check out the demo page of plugin &lt;a href=&#34;http://www.erichynds.com/examples/jquery-ui-multiselect-widget/demos/index.htm#basic&#34;&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;The problem with the plugin is that it won’t remember the user selection and value will be lost on postback. For that you can store the selected valued delimited by comma in hidden field and restore the value on page load.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Reset .net validation controls client side</title>
+      <link>http://localhost:1313/2013/04/reset-net-validation-controls-client.html</link>
+      <pubDate>Tue, 02 Apr 2013 23:28:00 +0530</pubDate>
+      <guid>http://localhost:1313/2013/04/reset-net-validation-controls-client.html</guid>
+      <description>&lt;p&gt;On many occasions we provide form reset functionality and people handle it client side or server side. In general we validate input from the user and show proper validation message. But sometimes it happens that user has entered wrong input and thus it will display validation messages. Now if you have handled form reset functionality client side, you must reset all validation message as well. You can do it as shown in below code:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>iTextSharp - Add Image from base64 string</title>
+      <link>http://localhost:1313/2013/03/itextsharp-add-image-from-base64-string.html</link>
+      <pubDate>Sun, 17 Mar 2013 22:53:00 +0530</pubDate>
+      <guid>http://localhost:1313/2013/03/itextsharp-add-image-from-base64-string.html</guid>
+      <description>&lt;p&gt;Itexhsharp is one of the popular third party component to create PDF with .Net framework.&lt;/p&gt;
+&lt;p&gt;If you&amp;rsquo;re using Itextsharp for the very first time, I would suggest you to go through Mike&amp;rsquo;s &lt;a href=&#34;http://www.mikesdotnetting.com/Article/80/Create-PDFs-in-ASP.NET-getting-started-with-iTextSharp&#34;&gt;series on Itextsharp&lt;/a&gt; that helps you to get started and &lt;a href=&#34;http://www.mikesdotnetting.com/Article/87/iTextSharp-Working-with-images&#34;&gt;here&lt;/a&gt; is the article from the series that shows different ways to add images to  Itextsharp.&lt;/p&gt;
+&lt;p&gt;To add image from base64 string, you first need to convert base64 string in to bytes array and then you can call GetInstance method of Itextsharp Image which accepts bytes array.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>How to pass multiple records to stored procedure in Asp.net?</title>
+      <link>http://localhost:1313/2012/05/how-to-pass-multiple-records-to-stored.html</link>
+      <pubDate>Tue, 08 May 2012 01:14:00 +0530</pubDate>
+      <guid>http://localhost:1313/2012/05/how-to-pass-multiple-records-to-stored.html</guid>
+      <description>&lt;p&gt;There are mainly three ways you can pass multiple records to stored procedure.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Comma delimited string:  It is suitable for the scenario where you need to pass single column value&lt;/li&gt;
+&lt;li&gt;XML document : You need to support SQL Server 2005 and you’ve multiple column values.&lt;/li&gt;
+&lt;li&gt;Table valued parameter : You’ve SQL Server 2008 and you don’t want to get into parsing stuff at the backend and want the best performance.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;To know what is table valued parameter and how to pass datatable to stored procedure and implement upsert (update + insert) logic using Merge Statement, check out an old post &lt;a href=&#34;http://nilthakkar.blogspot.in/2009/11/sql-server-2008-table-valued-parameter.html&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>How to display message box in Asp.net?</title>
+      <link>http://localhost:1313/2012/01/how-to-display-message-box-in-aspnet.html</link>
+      <pubDate>Mon, 02 Jan 2012 22:34:00 +0530</pubDate>
+      <guid>http://localhost:1313/2012/01/how-to-display-message-box-in-aspnet.html</guid>
+      <description>&lt;p&gt;Every new beginner from windows form development background uses MsgBox.Show method but unfortunately it executes server side and will display the message box on server. Then they ask it on different forums seeking help, how to display message box in Asp.net then? (one of the most frequent and common question on asp.net forum)&lt;br&gt;
+There are various ways to do it.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Use JavaScript alert to display messagebox, confirm and prompt&lt;/li&gt;
+&lt;li&gt;Download &lt;a href=&#34;http://alerts.codeplex.com/&#34;&gt;alert&lt;/a&gt; control from codeplex and use it.&lt;/li&gt;
+&lt;li&gt;Use Modal Popup or Confirm Button from &lt;a href=&#34;http://www.asp.net/ajaxLibrary/AjaxControlToolkitSampleSite/Default.aspx&#34;&gt;Ajax Toolkit&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Use &lt;a href=&#34;http://jqueryui.com/demos/dialog/&#34;&gt;Jquery UI Dialog&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;You can use any Jquery based dialog box. I’ve been using &lt;a href=&#34;http://abeautifulsite.net/blog/2008/12/jquery-alert-dialogs/&#34;&gt;Jalert&lt;/a&gt; for quite a long time. It is easy to use and you can quickly customize as per the need. One of the best part of Jalert is that it allows you to perform certain activity by using Callback function. Before using Jalert, make sure you’ve referenced &lt;a href=&#34;http://jquery.com/&#34;&gt;Jquery&lt;/a&gt; in your project.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Show Modal Dialog with Asp.net webpage</title>
+      <link>http://localhost:1313/2009/10/show-modal-dialog-with-aspnet-webpage.html</link>
+      <pubDate>Fri, 02 Oct 2009 22:55:00 +0530</pubDate>
+      <guid>http://localhost:1313/2009/10/show-modal-dialog-with-aspnet-webpage.html</guid>
+      <description>How to display Modal Dialog with ASP.NET webpage using JavaScript ShowModalDialog method.</description>
+    </item>
+    <item>
+      <title>Generate Nested Gridview Dynamically</title>
+      <link>http://localhost:1313/2009/07/generate-nested-gridview-dynamically.html</link>
+      <pubDate>Tue, 14 Jul 2009 15:26:00 +0530</pubDate>
+      <guid>http://localhost:1313/2009/07/generate-nested-gridview-dynamically.html</guid>
+      <description>&lt;p&gt;As i said in my last post, I’ll write about how to generate Nested Gridview dynamically. As there are many articles available on the net, let me provide you the link to the article that i referred.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://progtalk.com/ViewArticle.aspx?ArticleID=54&#34;&gt;Gridview Control to show master-child or master-slave data&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;It provides detail explanation with snapshot. There is one disadvantage that Gridview control is available only on client side. It means if you want to perform some action on server side like you want to get child controls Gridview then it’s not possible.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Nested Gridview in Asp.net 2.0</title>
+      <link>http://localhost:1313/2009/05/nested-gridview-in-aspnet-20.html</link>
+      <pubDate>Mon, 18 May 2009 23:53:00 +0530</pubDate>
+      <guid>http://localhost:1313/2009/05/nested-gridview-in-aspnet-20.html</guid>
+      <description>How to create nested GridView in ASP.NET 2.0 with expand/collapse functionality.</description>
+    </item>
+    <item>
+      <title>Retrieve selected treenode value at server side</title>
+      <link>http://localhost:1313/2009/05/retrieve-selected-treenode-value-at.html</link>
+      <pubDate>Tue, 05 May 2009 23:28:00 +0530</pubDate>
+      <guid>http://localhost:1313/2009/05/retrieve-selected-treenode-value-at.html</guid>
+      <description>&lt;p&gt;As I said in my previous post here’s the way to retrieve selected tree node value at the server-side.&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;treeviewcheckbox&#34; loading=&#34;lazy&#34; src=&#34;http://localhost:1313/images/8889f-treeviewcheckbox_thumb.jpg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;In the above image, all the nodes are selected including parent node. In my first &lt;a href=&#34;http://nilthakkar.blogspot.com/2009/03/populate-treeview-with-database-fields.html&#34;&gt;post&lt;/a&gt; we concatenated the value of the parent node with child node and assigned it to child node so that whenever we want to retrieve value of child node, we can have parent node value.&lt;/p&gt;
+&lt;p&gt;Here’s the output of the selected nodes:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>TreeView Node Value at Client Side</title>
+      <link>http://localhost:1313/2009/04/treeview-node-value-at-client-side.html</link>
+      <pubDate>Fri, 17 Apr 2009 22:45:00 +0530</pubDate>
+      <guid>http://localhost:1313/2009/04/treeview-node-value-at-client-side.html</guid>
+      <description>Retrieve selected ASP.NET TreeView node text and value on the client side.</description>
+    </item>
+    <item>
+      <title>Check Uncheck Treeview Checkboxes with Javascript</title>
+      <link>http://localhost:1313/2009/04/check-uncheck-treeview-checkboxes-with_13.html</link>
+      <pubDate>Mon, 13 Apr 2009 00:23:00 +0530</pubDate>
+      <guid>http://localhost:1313/2009/04/check-uncheck-treeview-checkboxes-with_13.html</guid>
+      <description>Client script to check or uncheck ASP.NET TreeView checkboxes and keep parents and children in sync.</description>
+    </item>
+    <item>
+      <title>Populate Treeview With Database Fields</title>
+      <link>http://localhost:1313/2009/03/populate-treeview-with-database-fields.html</link>
+      <pubDate>Thu, 26 Mar 2009 22:04:00 +0530</pubDate>
+      <guid>http://localhost:1313/2009/03/populate-treeview-with-database-fields.html</guid>
+      <description>&lt;p&gt;This post describes how to populate treeview with database fields. People often required to populate treeview with database fields and they choose different approaches to make it work. Here I am going to describe the simplest way.&lt;/p&gt;
+&lt;p&gt;Here I&amp;rsquo;ll be using Sql Server Sample Database: Pubs&lt;/p&gt;
+&lt;p&gt;Relations:&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://4.bp.blogspot.com/_2cveClWhO_o/Scu3_CDa48I/AAAAAAAAAKc/SvxkVDaR46U/s1600-h/Relation.JPG&#34;&gt;&lt;img loading=&#34;lazy&#34; src=&#34;http://4.bp.blogspot.com/_2cveClWhO_o/Scu3_CDa48I/AAAAAAAAAKc/SvxkVDaR46U/s400/Relation.JPG&#34;&gt;&lt;/a&gt;Treeview :&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://4.bp.blogspot.com/_2cveClWhO_o/Scu5cZG5VAI/AAAAAAAAAKk/o4p8h6U4HDw/s1600-h/TreeView.JPG&#34;&gt;&lt;img loading=&#34;lazy&#34; src=&#34;http://4.bp.blogspot.com/_2cveClWhO_o/Scu5cZG5VAI/AAAAAAAAAKk/o4p8h6U4HDw/s400/TreeView.JPG&#34;&gt;&lt;/a&gt;&lt;br&gt;
+VB Code :&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-vb&#34; data-lang=&#34;vb&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;Public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;Sub&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;GenerateTreeView&lt;/span&gt;()
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;   &lt;span style=&#34;color:#66d9ef&#34;&gt;Dim&lt;/span&gt; ds &lt;span style=&#34;color:#f92672&#34;&gt;As&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;New&lt;/span&gt; DataSet
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;   &lt;span style=&#34;color:#66d9ef&#34;&gt;Dim&lt;/span&gt; conn &lt;span style=&#34;color:#f92672&#34;&gt;As&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;New&lt;/span&gt; SqlConnection
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;   &lt;span style=&#34;color:#66d9ef&#34;&gt;Dim&lt;/span&gt; connString &lt;span style=&#34;color:#f92672&#34;&gt;As&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;String&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;   &lt;span style=&#34;color:#66d9ef&#34;&gt;Dim&lt;/span&gt; strQuery &lt;span style=&#34;color:#f92672&#34;&gt;As&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;String&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;   &lt;span style=&#34;color:#66d9ef&#34;&gt;Dim&lt;/span&gt; da &lt;span style=&#34;color:#f92672&#34;&gt;As&lt;/span&gt; SqlDataAdapter
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;   &lt;span style=&#34;color:#66d9ef&#34;&gt;Dim&lt;/span&gt; dtJob &lt;span style=&#34;color:#f92672&#34;&gt;As&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;New&lt;/span&gt; DataTable
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;   &lt;span style=&#34;color:#66d9ef&#34;&gt;Dim&lt;/span&gt; dtEmp &lt;span style=&#34;color:#f92672&#34;&gt;As&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;New&lt;/span&gt; DataTable
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;   &lt;span style=&#34;color:#66d9ef&#34;&gt;Dim&lt;/span&gt; nodeJob &lt;span style=&#34;color:#f92672&#34;&gt;As&lt;/span&gt; TreeNode
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;   &lt;span style=&#34;color:#66d9ef&#34;&gt;Dim&lt;/span&gt; nodeEmp &lt;span style=&#34;color:#f92672&#34;&gt;As&lt;/span&gt; TreeNode
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;   &lt;span style=&#34;color:#66d9ef&#34;&gt;Try&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;   connString &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; ConfigurationManager.ConnectionStrings(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;pubsConnectionString&amp;#34;&lt;/span&gt;).ToString()
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;   strQuery &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;select job_id,job_desc from jobs&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;   da &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;New&lt;/span&gt; SqlDataAdapter(strQuery, connString)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;   da.Fill(dtJob)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;   dtJob.TableName &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Job&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;   ds.Tables.Add(dtJob)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;   strQuery &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;SELECT emp_id, fname, lname, job_id FROM employee ORDER BY job_id&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;   da &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;New&lt;/span&gt; SqlDataAdapter(strQuery, connString)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;   da.Fill(dtEmp)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;   dtEmp.TableName &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Employee&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;   ds.Tables.Add(dtEmp)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;   &lt;span style=&#34;color:#75715e&#34;&gt;&amp;#39;define RelationShip
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;   ds.Relations.Add(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;JobEmployee&amp;#34;&lt;/span&gt;, ds.Tables(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Job&amp;#34;&lt;/span&gt;).Columns(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;job_id&amp;#34;&lt;/span&gt;),
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt; ds.Tables(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Employee&amp;#34;&lt;/span&gt;).Columns(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;job_id&amp;#34;&lt;/span&gt;))
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;   &lt;span style=&#34;color:#66d9ef&#34;&gt;For&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;Each&lt;/span&gt; dr &lt;span style=&#34;color:#f92672&#34;&gt;As&lt;/span&gt; DataRow &lt;span style=&#34;color:#f92672&#34;&gt;In&lt;/span&gt; ds.Tables(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;job&amp;#34;&lt;/span&gt;).Rows       &lt;span style=&#34;color:#75715e&#34;&gt;&amp;#39;Parent Nodes
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;       nodeJob &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;New&lt;/span&gt; TreeNode()
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;       nodeJob.Value &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; dr(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;job_id&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;       nodeJob.Text &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; dr(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;job_desc&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;       nodeJob.ShowCheckBox &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;True&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;       nodeJob.Expanded &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;False&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;       tvSample.Nodes.Add(nodeJob)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;       &lt;span style=&#34;color:#66d9ef&#34;&gt;For&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;Each&lt;/span&gt; drr &lt;span style=&#34;color:#f92672&#34;&gt;As&lt;/span&gt; DataRow &lt;span style=&#34;color:#f92672&#34;&gt;In&lt;/span&gt; dr.GetChildRows(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;JobEmployee&amp;#34;&lt;/span&gt;)    &lt;span style=&#34;color:#75715e&#34;&gt;&amp;#39;Child Nodes
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;           nodeEmp &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;New&lt;/span&gt; TreeNode()
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;           nodeEmp.Text &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; drr(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;fname&amp;#34;&lt;/span&gt;) &lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34; &amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&lt;/span&gt; drr(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;lname&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;           &lt;span style=&#34;color:#75715e&#34;&gt;&amp;#39;here concating parent node value with child node value
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;           &lt;span style=&#34;color:#75715e&#34;&gt;&amp;#39;so that it will be easy to get the selected node value
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;           nodeEmp.Value &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; drr(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;emp_id&amp;#34;&lt;/span&gt;) &lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;$&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&lt;/span&gt; dr(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;job_id&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;           nodeEmp.ShowCheckBox &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;True&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;           nodeJob.ChildNodes.Add(nodeEmp)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;       &lt;span style=&#34;color:#66d9ef&#34;&gt;Next&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;   &lt;span style=&#34;color:#66d9ef&#34;&gt;Next&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#66d9ef&#34;&gt;Catch&lt;/span&gt; ex &lt;span style=&#34;color:#f92672&#34;&gt;As&lt;/span&gt; Exception
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    strQuery &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;Nothing&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    da &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;Nothing&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    conn &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;Nothing&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    connString &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;Nothing&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#66d9ef&#34;&gt;Finally&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;End&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;Try&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;End&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;Sub&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;C# Code:&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

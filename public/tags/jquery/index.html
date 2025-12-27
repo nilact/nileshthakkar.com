@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto" data-theme="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>JQuery | Nilesh Thakkar</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="author" content="Nilesh Thakkar">
+<link rel="canonical" href="http://localhost:1313/tags/jquery/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.d2a1eb8f7c6b93d414a5761b6f17d45a647cc163f0a2fdf76ec650437153a2e8.css" integrity="sha256-0qHrj3xrk9QUpXYbbxfUWmR8wWPwov33bsZQQ3FToug=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" type="application/rss+xml" href="http://localhost:1313/tags/jquery/index.xml" title="rss">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/tags/jquery/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            .list::-webkit-scrollbar-thumb {
+                border-color: var(--code-bg);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script><meta property="og:url" content="http://localhost:1313/tags/jquery/">
+  <meta property="og:site_name" content="Nilesh Thakkar">
+  <meta property="og:title" content="JQuery">
+  <meta property="og:locale" content="en-us">
+  <meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="JQuery">
+<meta name="twitter:description" content="">
+
+</head>
+<body class="list" id="top">
+    <header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="Nilesh Thakkar (Alt + H)">Nilesh Thakkar</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/search/" title="Search (Alt &#43; /)" accesskey=/>
+                    <span>Search</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/posts/" title="Posts">
+                    <span>Posts</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/about/" title="About Me">
+                    <span>About Me</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/index.xml" title="RSS">
+                    <span>RSS</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main"> 
+<header class="page-header"><div class="breadcrumbs"><a href="http://localhost:1313/">Home</a>&nbsp;»&nbsp;<a href="http://localhost:1313/tags/">Tags</a></div>
+  <h1>
+    JQuery
+  </h1>
+</header>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">JQuery UI AutoComplete TextBox from Database using PageMethod in ASP.Net
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>In this post we’ll see how to user Jquery UI Autocomplete with asp.net pagemethod.
+For database, we’ll be using Northwind database.
+PageMethod:
+\[ScriptMethod(ResponseFormat= ResponseFormat.Json)\] \[WebMethod\] public static List&lt;AutoCompleteHelper&gt; GetEmployee(string searchText) { using (SqlConnection conn = new SqlConnection()) { conn.ConnectionString = ConfigurationManager .ConnectionStrings\[&#34;NorthwindConnectionString&#34;\].ConnectionString; using (SqlCommand cmd = new SqlCommand()) { cmd.CommandText = &#34;select CustomerID,ContactName from Customers where &#34; &#43; &#34;ContactName like @SearchText &#43; &#39;%&#39;&#34;; cmd.Parameters.AddWithValue(&#34;@SearchText&#34;, searchText); cmd.Connection = conn; List&lt;AutoCompleteHelper&gt; listAutoCompleteHelper = new List&lt;AutoCompleteHelper&gt;(); conn.Open(); using (SqlDataReader sdr = cmd.ExecuteReader()) { while (sdr.Read()) { AutoCompleteHelper objCompleteHelper = new AutoCompleteHelper(); objCompleteHelper.displayText = Convert.ToString(sdr\[&#34;ContactName&#34;\]); objCompleteHelper.displayValue = Convert.ToString(sdr\[&#34;CustomerID&#34;\]); listAutoCompleteHelper.Add(objCompleteHelper); } } conn.Close(); Thread.Sleep(3000); return listAutoCompleteHelper; } } } In above code, we’re fetching data from customer table from northwind database based on text entered by user. You may want to have this code in separate (data access) layer and must use stored procedure rather than inline query, I’ve included this code just for demonstration purpose.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2014-01-16 16:25:00 +0530 +0530'>January 16, 2014</span>&nbsp;·&nbsp;<span>3 min</span>&nbsp;·&nbsp;<span>Nilesh Thakkar</span></footer>
+  <a class="entry-link" aria-label="post link to JQuery UI AutoComplete TextBox from Database using PageMethod in ASP.Net" href="http://localhost:1313/2014/01/jquery-ui-autocomplete-textbox-from.html"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Jquery DataTables : Add column filter and remove global filter
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Jquery DataTables plugin allows you to search through all the columns and it works pretty well. Now if you wan to add column wise filter, you need to use JQuery DataTables Column Filter plugin.
+To extend Jquery DataTables with Column Filter plugin, you need to have code like below:
+&lt;asp:Repeater ID=&#34;repUserTempAssignment&#34; runat=&#34;server&#34; DataSourceID=&#34;SqlDataSource1&#34; EnableViewState=&#34;false&#34;&gt; &lt;HeaderTemplate&gt; &lt;table class=&#34;table-data&#34; id=&#34;tblEmployee&#34; style=&#34;width: 100%px;&#34;&gt; &lt;thead&gt; &lt;tr&gt; &lt;th&gt; First Name &lt;/th&gt; &lt;th&gt; Last Name &lt;/th&gt; &lt;th&gt; City &lt;/th&gt; &lt;th&gt; Country &lt;/th&gt; &lt;/tr&gt; &lt;tr&gt; &lt;th&gt; First Name &lt;/th&gt; &lt;th&gt; Last Name &lt;/th&gt; &lt;th&gt; City &lt;/th&gt; &lt;th&gt; Country &lt;/th&gt; &lt;/tr&gt; &lt;/thead&gt; &lt;tbody&gt; &lt;/HeaderTemplate&gt; &lt;ItemTemplate&gt; &lt;tr&gt; &lt;td&gt; &lt;%# Eval(&#34;FirstName&#34;) %&gt; &lt;/td&gt; &lt;td&gt; &lt;%# Eval(&#34;LastName&#34;) %&gt; &lt;/td&gt; &lt;td&gt; &lt;%# Eval(&#34;City&#34;) %&gt; &lt;/td&gt; &lt;td&gt; &lt;%# Eval(&#34;Country&#34;) %&gt; &lt;/td&gt; &lt;/tr&gt; &lt;/ItemTemplate&gt; &lt;FooterTemplate&gt; &lt;/tbody&gt;&lt;tfoot&gt; &lt;/tfoot&gt; &lt;/table&gt; &lt;/FooterTemplate&gt; &lt;/asp:Repeater&gt; I’m using asp.net repeater control to bind employee list. If you notice in above code table has two rows in header. One will work as table header and one will be replaced with textboxes at runtime which will work as column filter. For that you need below script:
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2014-01-15 15:50:00 +0530 +0530'>January 15, 2014</span>&nbsp;·&nbsp;<span>2 min</span>&nbsp;·&nbsp;<span>Nilesh Thakkar</span></footer>
+  <a class="entry-link" aria-label="post link to Jquery DataTables : Add column filter and remove global filter" href="http://localhost:1313/2014/01/jquery-datatables-add-column-filter-and.html"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Jquery Multiselect plugin retain selection on postback in Asp.net
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>One can use Jquery Mutiselect plugin to allow user to select multiple items from the options available in dropdown. When we click on dropdown it looks something like below:
+Check out the demo page of plugin here
+The problem with the plugin is that it won’t remember the user selection and value will be lost on postback. For that you can store the selected valued delimited by comma in hidden field and restore the value on page load.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2013-05-11 19:30:00.001 +0530 +0530'>May 11, 2013</span>&nbsp;·&nbsp;<span>2 min</span>&nbsp;·&nbsp;<span>Nilesh Thakkar</span></footer>
+  <a class="entry-link" aria-label="post link to Jquery Multiselect plugin retain selection on postback in Asp.net" href="http://localhost:1313/2013/05/jquery-multiselect-plugin-retain.html"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">How to display message box in Asp.net?
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Every new beginner from windows form development background uses MsgBox.Show method but unfortunately it executes server side and will display the message box on server. Then they ask it on different forums seeking help, how to display message box in Asp.net then? (one of the most frequent and common question on asp.net forum)
+There are various ways to do it.
+Use JavaScript alert to display messagebox, confirm and prompt Download alert control from codeplex and use it. Use Modal Popup or Confirm Button from Ajax Toolkit Use Jquery UI Dialog You can use any Jquery based dialog box. I’ve been using Jalert for quite a long time. It is easy to use and you can quickly customize as per the need. One of the best part of Jalert is that it allows you to perform certain activity by using Callback function. Before using Jalert, make sure you’ve referenced Jquery in your project.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2012-01-02 22:34:00 +0530 +0530'>January 2, 2012</span>&nbsp;·&nbsp;<span>3 min</span>&nbsp;·&nbsp;<span>Nilesh Thakkar</span></footer>
+  <a class="entry-link" aria-label="post link to How to display message box in Asp.net?" href="http://localhost:1313/2012/01/how-to-display-message-box-in-aspnet.html"></a>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="http://localhost:1313/">Nilesh Thakkar</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

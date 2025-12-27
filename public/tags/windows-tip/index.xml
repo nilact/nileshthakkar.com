@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Windows Tip on Nilesh Thakkar</title>
+    <link>http://localhost:1313/tags/windows-tip/</link>
+    <description>Recent content in Windows Tip on Nilesh Thakkar</description>
+    <generator>Hugo -- 0.153.3</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 22 Sep 2013 21:50:00 +0530</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/windows-tip/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Copy as path in Windows 7/8</title>
+      <link>http://localhost:1313/2013/09/copy-as-path-in-windows-78.html</link>
+      <pubDate>Sun, 22 Sep 2013 21:50:00 +0530</pubDate>
+      <guid>http://localhost:1313/2013/09/copy-as-path-in-windows-78.html</guid>
+      <description>&lt;p&gt;Many times we want to copy complete file path and we do that in two steps:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Copy path of the folder/drive in which file resides&lt;/li&gt;
+&lt;li&gt;Copy Filename&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;and use combination of it to solve the purpose.&lt;/p&gt;
+&lt;p&gt;One simple solution exists from win 7 onwards is to select file and press Shift key + Right Mouse click. Context menu will have an option “Copy as path”, select it and you’re done.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

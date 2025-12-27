@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>SQL Server 2008 on Nilesh Thakkar</title>
+    <link>http://localhost:1313/tags/sql-server-2008/</link>
+    <description>Recent content in SQL Server 2008 on Nilesh Thakkar</description>
+    <generator>Hugo -- 0.153.3</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 14 Dec 2011 23:14:00 +0530</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/sql-server-2008/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>SQL Server Add-In : SSMS Tools Pack</title>
+      <link>http://localhost:1313/2011/12/sql-server-add-in-ssms-tools-pack.html</link>
+      <pubDate>Wed, 14 Dec 2011 23:14:00 +0530</pubDate>
+      <guid>http://localhost:1313/2011/12/sql-server-add-in-ssms-tools-pack.html</guid>
+      <description>&lt;p&gt;SSMS Tools Pack, I downloaded this free Add-in 3 weeks ago, and I am glad that I did that. Below are the few features that I’ve been using so far :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;SQL Snippets&lt;/li&gt;
+&lt;li&gt;Format SQL&lt;/li&gt;
+&lt;li&gt;New Query Template&lt;/li&gt;
+&lt;li&gt;CRUD Generation&lt;/li&gt;
+&lt;li&gt;Regions and Debug sections&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;You can check out more useful features &lt;a href=&#34;http://www.ssmstoolspack.com/Features&#34;&gt;here&lt;/a&gt; and you can download it &lt;a href=&#34;http://www.ssmstoolspack.com/Download&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;This add-in makes life easier with its number of features that are missing from SSMS.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Outer joins and search predicates – II</title>
+      <link>http://localhost:1313/2011/07/outer-joins-and-search-predicates-ii.html</link>
+      <pubDate>Sun, 31 Jul 2011 15:51:00 +0530</pubDate>
+      <guid>http://localhost:1313/2011/07/outer-joins-and-search-predicates-ii.html</guid>
+      <description>&lt;p&gt;In my &lt;a href=&#34;http://nilthakkar.blogspot.com/2011/07/outer-joins-and-search-predicates.html&#34;&gt;last post&lt;/a&gt; we saw that if we place search predicate in WHERE clause instead of placing it along with ON clause, we may get expected output. Now let&amp;rsquo;s understand what happens behind the scene.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;Note : we&amp;#39;ll use pubs database for the example. 
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Suppose we want to list down all the book titles, then we might write following query.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;SELECT T.title\_id as ID, T.Title 
+FROM titles T 
+ORDER BY T.Title 
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Now we are asked to list down sales quantity for any given store for all the titles. If the given title is not sold, the quantity should be zero. For that we might write following query.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>SQL Server 2008 : Table Valued Parameter and Merge</title>
+      <link>http://localhost:1313/2009/11/sql-server-2008-table-valued-parameter.html</link>
+      <pubDate>Thu, 19 Nov 2009 22:57:00 +0530</pubDate>
+      <guid>http://localhost:1313/2009/11/sql-server-2008-table-valued-parameter.html</guid>
+      <description>&lt;p&gt;Recently I was working on one project and I was supposed to Insert/Update bunch of records in database. I wanted to do it in a single round trip. I Google about it and found out two excellent features of SQL Server 2008: Table Valued Parameter and Merge Statement.&lt;/p&gt;
+&lt;p&gt;Table Valued Parameter allows you to send bunch of records to database in single round trip. To know how it can be done, please refer this &lt;a href=&#34;http://blogs.microsoft.co.il/blogs/bursteg/archive/2007/12/02/sql-server-2008-table-valued-parameters.aspx&#34;&gt;link&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

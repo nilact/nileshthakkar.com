@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Visual Studio on Nilesh Thakkar</title>
+    <link>http://localhost:1313/tags/visual-studio/</link>
+    <description>Recent content in Visual Studio on Nilesh Thakkar</description>
+    <generator>Hugo -- 0.153.3</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 14 Apr 2013 17:07:00 +0530</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/visual-studio/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Visual Studio Macros and Build Events</title>
+      <link>http://localhost:1313/2013/04/visual-studio-macros-and-build-events.html</link>
+      <pubDate>Sun, 14 Apr 2013 17:07:00 +0530</pubDate>
+      <guid>http://localhost:1313/2013/04/visual-studio-macros-and-build-events.html</guid>
+      <description>&lt;p&gt;Visual studio has a nifty feature called Post/Pre Build events. These are used to include extra Dos commands and Macros and execute them before or after build.&lt;/p&gt;
+&lt;p&gt;You can open it using &lt;strong&gt;project properties&lt;/strong&gt; and it will open dialog as shown below:&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;BuildEvent Dialog&#34; loading=&#34;lazy&#34; src=&#34;http://localhost:1313/images/53d3a-buildevent252520dialog_thumb25255b225255d.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;For post-build events you can define when to run commands included as shown in below snap:&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;Post-build events&#34; loading=&#34;lazy&#34; src=&#34;http://localhost:1313/images/0b6d2-post-build252520events_thumb25255b325255d.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;You can click the respective Edit build buttons and it will open popup as shown below:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>VS 2010 and ASPX Edit Helper</title>
+      <link>http://localhost:1313/2011/05/vs-2010-and-aspx-edit-helper.html</link>
+      <pubDate>Thu, 05 May 2011 23:57:00 +0530</pubDate>
+      <guid>http://localhost:1313/2011/05/vs-2010-and-aspx-edit-helper.html</guid>
+      <description>&lt;p&gt;Some of my friend reported that they can’t use &lt;a href=&#34;http://ardentdev.com/aspxedithelper/&#34;&gt;ASPX Edit Helper&lt;/a&gt; with VS 2010 and from the original post it is evident that it works great with VS 2005 and VS 2008.&lt;/p&gt;
+&lt;p&gt;But one of the guy added support for VS 2010 using original souce code. You can download the latest source and binaries (with latest bug fixes) &lt;a href=&#34;http://www.rowlandoconnor.com/2010/04/16/aspx-edit-add-in-for-visual-studio-2010/&#34;&gt;here&lt;/a&gt; and if you’d like to change something, of course you can as source code is available.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Useful Visual Studio Add-Ins</title>
+      <link>http://localhost:1313/2011/04/useful-visual-studio-add-ins.html</link>
+      <pubDate>Sun, 10 Apr 2011 16:40:00 +0530</pubDate>
+      <guid>http://localhost:1313/2011/04/useful-visual-studio-add-ins.html</guid>
+      <description>&lt;p&gt;Recently one of the guy asked on Asp.net forum that is there any shortcut key to insert comments above method or function. There’s no exact shortcut but yes, you can insert comment above your method and function by typing 3 slash (///) in c# and 3 single quote in VB and still you’ve to type summary for your method or function to define what it does.&lt;/p&gt;
+&lt;p&gt;But there exists add-in which help you to generate comments with summary on your defined shortcut. Just download &lt;a href=&#34;http://submain.com/products/ghostdoc.aspx&#34;&gt;GhostDoc&lt;/a&gt;, install it and define your short cut. Now whenever you’re required to generate comments, fire your defined shortcut once you’re done with that method or function and it will insert comments with summary.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>XML on Nilesh Thakkar</title>
+    <link>http://localhost:1313/tags/xml/</link>
+    <description>Recent content in XML on Nilesh Thakkar</description>
+    <generator>Hugo -- 0.153.3</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 08 May 2012 01:14:00 +0530</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/xml/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to pass multiple records to stored procedure in Asp.net?</title>
+      <link>http://localhost:1313/2012/05/how-to-pass-multiple-records-to-stored.html</link>
+      <pubDate>Tue, 08 May 2012 01:14:00 +0530</pubDate>
+      <guid>http://localhost:1313/2012/05/how-to-pass-multiple-records-to-stored.html</guid>
+      <description>&lt;p&gt;There are mainly three ways you can pass multiple records to stored procedure.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Comma delimited string:  It is suitable for the scenario where you need to pass single column value&lt;/li&gt;
+&lt;li&gt;XML document : You need to support SQL Server 2005 and you’ve multiple column values.&lt;/li&gt;
+&lt;li&gt;Table valued parameter : You’ve SQL Server 2008 and you don’t want to get into parsing stuff at the backend and want the best performance.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;To know what is table valued parameter and how to pass datatable to stored procedure and implement upsert (update + insert) logic using Merge Statement, check out an old post &lt;a href=&#34;http://nilthakkar.blogspot.in/2009/11/sql-server-2008-table-valued-parameter.html&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

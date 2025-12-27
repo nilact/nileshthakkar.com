@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>JavaScript on Nilesh Thakkar</title>
+    <link>http://localhost:1313/tags/javascript/</link>
+    <description>Recent content in JavaScript on Nilesh Thakkar</description>
+    <generator>Hugo -- 0.153.3</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 16 Jan 2014 16:25:00 +0530</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>JQuery UI AutoComplete TextBox from Database using PageMethod in ASP.Net</title>
+      <link>http://localhost:1313/2014/01/jquery-ui-autocomplete-textbox-from.html</link>
+      <pubDate>Thu, 16 Jan 2014 16:25:00 +0530</pubDate>
+      <guid>http://localhost:1313/2014/01/jquery-ui-autocomplete-textbox-from.html</guid>
+      <description>&lt;p&gt;In this post we’ll see how to user Jquery UI Autocomplete with asp.net pagemethod.&lt;/p&gt;
+&lt;p&gt;For database, we’ll be using &lt;a href=&#34;http://northwinddatabase.codeplex.com/releases/view/71634&#34;&gt;Northwind&lt;/a&gt; database.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;PageMethod:&lt;/strong&gt;&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;\[ScriptMethod(ResponseFormat= ResponseFormat.Json)\]
+    \[WebMethod\]
+    public static List&amp;lt;AutoCompleteHelper&amp;gt; GetEmployee(string searchText)
+    {
+        using (SqlConnection conn = new SqlConnection())
+        {
+            conn.ConnectionString = ConfigurationManager
+                    .ConnectionStrings\[&amp;#34;NorthwindConnectionString&amp;#34;\].ConnectionString;
+            using (SqlCommand cmd = new SqlCommand())
+            {
+                cmd.CommandText = &amp;#34;select CustomerID,ContactName from Customers where &amp;#34; +
+                &amp;#34;ContactName like @SearchText + &amp;#39;%&amp;#39;&amp;#34;;
+                cmd.Parameters.AddWithValue(&amp;#34;@SearchText&amp;#34;, searchText);
+                cmd.Connection = conn;
+                List&amp;lt;AutoCompleteHelper&amp;gt; listAutoCompleteHelper = new List&amp;lt;AutoCompleteHelper&amp;gt;();
+                conn.Open();
+                using (SqlDataReader sdr = cmd.ExecuteReader())
+                {
+                    while (sdr.Read())
+                    {
+                        AutoCompleteHelper objCompleteHelper = new AutoCompleteHelper();
+                        objCompleteHelper.displayText = Convert.ToString(sdr\[&amp;#34;ContactName&amp;#34;\]);
+                        objCompleteHelper.displayValue = Convert.ToString(sdr\[&amp;#34;CustomerID&amp;#34;\]);
+                        listAutoCompleteHelper.Add(objCompleteHelper);
+                        
+                    }
+                }
+                conn.Close();
+                Thread.Sleep(3000);
+                return listAutoCompleteHelper;
+            }
+        }
+    }
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;In above code, we’re fetching data from customer table from northwind database based on text entered by user. You may want to have this code in separate (data access) layer and must use stored procedure rather than inline query, I’ve included this code just for demonstration purpose.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Jquery Multiselect plugin retain selection on postback in Asp.net</title>
+      <link>http://localhost:1313/2013/05/jquery-multiselect-plugin-retain.html</link>
+      <pubDate>Sat, 11 May 2013 19:30:00 +0530</pubDate>
+      <guid>http://localhost:1313/2013/05/jquery-multiselect-plugin-retain.html</guid>
+      <description>&lt;p&gt;One can use &lt;a href=&#34;http://www.erichynds.com/blog/jquery-ui-multiselect-widget&#34;&gt;Jquery Mutiselect&lt;/a&gt; plugin to allow user to select multiple items from the options available in dropdown. When we click on dropdown it looks something like below:&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;image&#34; loading=&#34;lazy&#34; src=&#34;http://localhost:1313/images/73080-image_thumb.png&#34;&gt;&lt;br&gt;
+Check out the demo page of plugin &lt;a href=&#34;http://www.erichynds.com/examples/jquery-ui-multiselect-widget/demos/index.htm#basic&#34;&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;The problem with the plugin is that it won’t remember the user selection and value will be lost on postback. For that you can store the selected valued delimited by comma in hidden field and restore the value on page load.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Reset .net validation controls client side</title>
+      <link>http://localhost:1313/2013/04/reset-net-validation-controls-client.html</link>
+      <pubDate>Tue, 02 Apr 2013 23:28:00 +0530</pubDate>
+      <guid>http://localhost:1313/2013/04/reset-net-validation-controls-client.html</guid>
+      <description>&lt;p&gt;On many occasions we provide form reset functionality and people handle it client side or server side. In general we validate input from the user and show proper validation message. But sometimes it happens that user has entered wrong input and thus it will display validation messages. Now if you have handled form reset functionality client side, you must reset all validation message as well. You can do it as shown in below code:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>How to display message box in Asp.net?</title>
+      <link>http://localhost:1313/2012/01/how-to-display-message-box-in-aspnet.html</link>
+      <pubDate>Mon, 02 Jan 2012 22:34:00 +0530</pubDate>
+      <guid>http://localhost:1313/2012/01/how-to-display-message-box-in-aspnet.html</guid>
+      <description>&lt;p&gt;Every new beginner from windows form development background uses MsgBox.Show method but unfortunately it executes server side and will display the message box on server. Then they ask it on different forums seeking help, how to display message box in Asp.net then? (one of the most frequent and common question on asp.net forum)&lt;br&gt;
+There are various ways to do it.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Use JavaScript alert to display messagebox, confirm and prompt&lt;/li&gt;
+&lt;li&gt;Download &lt;a href=&#34;http://alerts.codeplex.com/&#34;&gt;alert&lt;/a&gt; control from codeplex and use it.&lt;/li&gt;
+&lt;li&gt;Use Modal Popup or Confirm Button from &lt;a href=&#34;http://www.asp.net/ajaxLibrary/AjaxControlToolkitSampleSite/Default.aspx&#34;&gt;Ajax Toolkit&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Use &lt;a href=&#34;http://jqueryui.com/demos/dialog/&#34;&gt;Jquery UI Dialog&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;You can use any Jquery based dialog box. I’ve been using &lt;a href=&#34;http://abeautifulsite.net/blog/2008/12/jquery-alert-dialogs/&#34;&gt;Jalert&lt;/a&gt; for quite a long time. It is easy to use and you can quickly customize as per the need. One of the best part of Jalert is that it allows you to perform certain activity by using Callback function. Before using Jalert, make sure you’ve referenced &lt;a href=&#34;http://jquery.com/&#34;&gt;Jquery&lt;/a&gt; in your project.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Show Modal Dialog with Asp.net webpage</title>
+      <link>http://localhost:1313/2009/10/show-modal-dialog-with-aspnet-webpage.html</link>
+      <pubDate>Fri, 02 Oct 2009 22:55:00 +0530</pubDate>
+      <guid>http://localhost:1313/2009/10/show-modal-dialog-with-aspnet-webpage.html</guid>
+      <description>How to display Modal Dialog with ASP.NET webpage using JavaScript ShowModalDialog method.</description>
+    </item>
+    <item>
+      <title>Nested Gridview in Asp.net 2.0</title>
+      <link>http://localhost:1313/2009/05/nested-gridview-in-aspnet-20.html</link>
+      <pubDate>Mon, 18 May 2009 23:53:00 +0530</pubDate>
+      <guid>http://localhost:1313/2009/05/nested-gridview-in-aspnet-20.html</guid>
+      <description>How to create nested GridView in ASP.NET 2.0 with expand/collapse functionality.</description>
+    </item>
+    <item>
+      <title>TreeView Node Value at Client Side</title>
+      <link>http://localhost:1313/2009/04/treeview-node-value-at-client-side.html</link>
+      <pubDate>Fri, 17 Apr 2009 22:45:00 +0530</pubDate>
+      <guid>http://localhost:1313/2009/04/treeview-node-value-at-client-side.html</guid>
+      <description>Retrieve selected ASP.NET TreeView node text and value on the client side.</description>
+    </item>
+    <item>
+      <title>Check Uncheck Treeview Checkboxes with Javascript</title>
+      <link>http://localhost:1313/2009/04/check-uncheck-treeview-checkboxes-with_13.html</link>
+      <pubDate>Mon, 13 Apr 2009 00:23:00 +0530</pubDate>
+      <guid>http://localhost:1313/2009/04/check-uncheck-treeview-checkboxes-with_13.html</guid>
+      <description>Client script to check or uncheck ASP.NET TreeView checkboxes and keep parents and children in sync.</description>
+    </item>
+  </channel>
+</rss>
