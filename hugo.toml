@@ -54,3 +54,7 @@ theme = "PaperMod"
     name = "RSS"
     url = "/index.xml"
     weight = 30
+
+services:
+  googleAnalytics:
+    id = "G-SBB09EN1BQ"
